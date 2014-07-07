@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Data;
 using System.Text;
 using System.Windows.Forms;
+using System.Reflection;
 
 namespace SmartDeviceProject1.interfaz
 {
@@ -36,18 +37,19 @@ namespace SmartDeviceProject1.interfaz
         private Boolean validacionFormulario(){
             Boolean flag = false;
 
-            flag = !tCodServ.Equals("") ? true : false;
-            flag = !tDateHour.Equals("") ? true : false;
-            flag = !tCoordenate.Equals("") ? true : false;
-            flag = !tReadActual.Equals("") ? true : false;
-
+            flag = !this.tCodServ.Text.Equals("") ? true : false;
+            flag &= !this.tDateHour.Text.Equals("") ? true : false;
+            flag &= !this.tCoordenate.Text.Equals("") ? true : false;
+            flag &= !this.tReadActual.Text.Equals("") ? true : false;
+            
             return flag;
         }
 
         private void pSave_Click(object sender, EventArgs e)
-        {
+        {   //MessageBox.Show("click "+ validacionFormulario());
             if (validacionFormulario())
             {
+
                 new Dialog(this.main).ShowDialog();
             }
             else {

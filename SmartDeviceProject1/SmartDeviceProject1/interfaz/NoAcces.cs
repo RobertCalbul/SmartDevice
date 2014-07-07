@@ -90,12 +90,12 @@ namespace SmartDeviceProject1.interfaz
 
         private Boolean validacionFormulario() {
             Boolean flag = false;
-            flag = !tAdrres.Equals("") ? true : false;
-            flag = !tCodeService.Equals("") ? true : false;
-            flag = !tCoordenate.Equals("") ? true : false;
-            flag = !tDateHour.Equals("") ? true : false;
-            flag = !cMotivo.Text.Equals("") ? true : false;
-            flag = pTakePhoto.Image != null ? true : false;
+            flag = !this.tAdrres.Text.Equals("") ? true : false;
+            flag &= !this.tCodeService.Text.Equals("") ? true : false;
+            flag &= !this.tCoordenate.Text.Equals("") ? true : false;
+            flag &= !this.tDateHour.Text.Equals("") ? true : false;
+            flag &= this.cMotivo.SelectedItem!=null ? true : false;
+            flag &= this.pTakePhoto.Image != null ? true : false;
             return flag;
         }
         private void validaNumero(KeyPressEventArgs e)

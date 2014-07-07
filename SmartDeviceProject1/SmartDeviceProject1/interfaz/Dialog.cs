@@ -16,12 +16,7 @@ namespace SmartDeviceProject1.interfaz
         {
             InitializeComponent();
             this.main = main;
-
-            int dif_width = this.main.Width - this.Width;
-            int dif_height = this.main.Height - this.Height;
-
-        }
-
+        }
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             this.Close();

@@ -321,9 +321,6 @@
             this.Controls.Add(this.panelSave);
             this.Name = "NoAcces";
             this.Size = new System.Drawing.Size(240, 320);
-            this.Click += new System.EventHandler(this.NoAcces_Click);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.NoAcces_KeyUp);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NoAcces_KeyPress);
             this.panelSave.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
