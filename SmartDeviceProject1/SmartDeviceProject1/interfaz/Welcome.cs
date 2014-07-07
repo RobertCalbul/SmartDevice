@@ -34,6 +34,5 @@ namespace SmartDeviceProject1.interfaz
            // Gps gps = new Gps();
 
         }
-
     }
 }

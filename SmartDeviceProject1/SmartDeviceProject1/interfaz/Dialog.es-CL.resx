@@ -121,7 +121,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAegAAAFQCAYAAAB0ye0UAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAACxEAAAsRAX9kX5EAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8
+        YQUAAAAJcEhZcwAACw8AAAsPAZL5A6UAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8
         AABI1UlEQVR4Xu2dTahuyXWejTBCQghLGCFZKKaRjTBujBsLBV0hIyEsrgxRaIzTA03SIY09CjRKwGSU
         O9RI9NTQA41CaDJonEmTQNCsJ4ZokBsSiKGhPTAhMepkmMDN+x5/dbRPnfV9+6fWqr/9Dp7ue+rbu/52
         7XqrVq2q/UsvXrw4Lb/+67/+CngdPAM/AT/NYBh/exW8ZMUhhBBCRGAGzgyElqL8FvgAvNgJ7+G9r1hx
@@ -435,5 +435,17 @@
         Mq5T7zkylMLOmfjrQGvMQojuMAOFGBkILmfXNIUTbteieFOI78Kse4QQoi9e/NL/B+Dp1C7+FECqAAAA
         AElFTkSuQmCC
 </value>
+  </data>
+  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>64, 57</value>
+  </data>
+  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 66</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 162</value>
+  </data>
+  <data name="btnAceptar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 222</value>
   </data>
 </root>

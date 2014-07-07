@@ -33,7 +33,7 @@
             this.tCodServ = new System.Windows.Forms.TextBox();
             this.panelNodata = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.pSave = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,11 +49,11 @@
             this.tDateHour = new System.Windows.Forms.TextBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.tCoordenate = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.back = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel7.SuspendLayout();
             this.panelNodata.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.pSave.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -67,7 +67,7 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.Transparent;
             this.panel7.Controls.Add(this.tCodServ);
-            this.panel7.Location = new System.Drawing.Point(125, 62);
+            this.panel7.Location = new System.Drawing.Point(125, 87);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(120, 20);
             // 
@@ -81,13 +81,14 @@
             this.tCodServ.Size = new System.Drawing.Size(120, 21);
             this.tCodServ.TabIndex = 0;
             this.tCodServ.Text = "00023";
+            this.tCodServ.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tCodServ_KeyPress);
             // 
             // panelNodata
             // 
             this.panelNodata.BackColor = System.Drawing.Color.Gray;
             this.panelNodata.Controls.Add(this.label6);
             this.panelNodata.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelNodata.Location = new System.Drawing.Point(0, 248);
+            this.panelNodata.Location = new System.Drawing.Point(0, 300);
             this.panelNodata.Name = "panelNodata";
             this.panelNodata.Size = new System.Drawing.Size(240, 20);
             this.panelNodata.Click += new System.EventHandler(this.panel6_Click_1);
@@ -103,13 +104,14 @@
             this.label6.Text = "NO SE OUEDE TOMAR LECTURA";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // panel5
+            // pSave
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
-            this.panel5.Controls.Add(this.label5);
-            this.panel5.Location = new System.Drawing.Point(0, 160);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(120, 20);
+            this.pSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
+            this.pSave.Controls.Add(this.label5);
+            this.pSave.Location = new System.Drawing.Point(0, 185);
+            this.pSave.Name = "pSave";
+            this.pSave.Size = new System.Drawing.Size(120, 20);
+            this.pSave.Click += new System.EventHandler(this.pSave_Click);
             // 
             // label5
             // 
@@ -125,7 +127,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(129)))), ((int)(((byte)(128)))));
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(0, 135);
+            this.panel4.Location = new System.Drawing.Point(0, 160);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(120, 20);
             // 
@@ -143,7 +145,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(128)))), ((int)(((byte)(113)))));
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(0, 110);
+            this.panel3.Location = new System.Drawing.Point(0, 135);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(120, 20);
             // 
@@ -161,7 +163,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(99)))), ((int)(((byte)(74)))));
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(0, 87);
+            this.panel2.Location = new System.Drawing.Point(0, 112);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(120, 20);
             // 
@@ -179,7 +181,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(19)))), ((int)(((byte)(61)))));
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(0, 62);
+            this.panel1.Location = new System.Drawing.Point(0, 87);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(120, 20);
             // 
@@ -197,7 +199,7 @@
             // 
             this.panel8.BackColor = System.Drawing.Color.Transparent;
             this.panel8.Controls.Add(this.tReadActual);
-            this.panel8.Location = new System.Drawing.Point(125, 87);
+            this.panel8.Location = new System.Drawing.Point(125, 112);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(120, 20);
             // 
@@ -211,12 +213,13 @@
             this.tReadActual.Size = new System.Drawing.Size(120, 21);
             this.tReadActual.TabIndex = 0;
             this.tReadActual.Text = "1234";
+            this.tReadActual.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tReadActual_KeyPress);
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.Transparent;
             this.panel9.Controls.Add(this.tDateHour);
-            this.panel9.Location = new System.Drawing.Point(125, 110);
+            this.panel9.Location = new System.Drawing.Point(125, 135);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(120, 20);
             // 
@@ -235,7 +238,7 @@
             // 
             this.panel10.BackColor = System.Drawing.Color.Transparent;
             this.panel10.Controls.Add(this.tCoordenate);
-            this.panel10.Location = new System.Drawing.Point(125, 135);
+            this.panel10.Location = new System.Drawing.Point(125, 160);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(120, 20);
             // 
@@ -251,44 +254,42 @@
             this.tCoordenate.TabIndex = 0;
             this.tCoordenate.Text = "ltd: 39.1º N          lgtd: 11.1ºW";
             // 
+            // back
+            // 
+            this.back.Location = new System.Drawing.Point(0, 25);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(40, 40);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(86, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(81, 11);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(67, 40);
+            this.pictureBox1.Size = new System.Drawing.Size(84, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            // 
-            // back
-            // 
-            this.back.Location = new System.Drawing.Point(0, 0);
-            this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(40, 40);
-            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // TakeData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.back);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.back);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panelNodata);
-            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.pSave);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel7);
             this.Name = "TakeData";
-            this.Size = new System.Drawing.Size(240, 268);
-            this.Click += new System.EventHandler(this.TakeData_Click);
+            this.Size = new System.Drawing.Size(240, 320);
             this.panel7.ResumeLayout(false);
             this.panelNodata.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
+            this.pSave.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -304,7 +305,7 @@
 
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panelNodata;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel pSave;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
@@ -321,9 +322,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel back;
+        private System.Windows.Forms.PictureBox pictureBox1;
 
     }
 }

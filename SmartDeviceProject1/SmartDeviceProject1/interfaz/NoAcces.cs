@@ -23,7 +23,9 @@ namespace SmartDeviceProject1.interfaz
 
         private void panelSave_Click(object sender, EventArgs e)
         {
-            new Dialog(this.main).ShowDialog();
+            if (validacionFormulario())
+                new Dialog(this.main).ShowDialog();
+            else MessageBox.Show("Verifique todos los campo.");
         }
 
         private void panelLoadPhoto_Click(object sender, EventArgs e)
@@ -84,6 +86,30 @@ namespace SmartDeviceProject1.interfaz
         {
             this.main.PanelPrincipal.Controls.Clear();
             this.main.PanelPrincipal.Controls.Add(new TakeData(this.main));
+        }
+
+        private Boolean validacionFormulario() {
+            Boolean flag = false;
+            flag = !tAdrres.Equals("") ? true : false;
+            flag = !tCodeService.Equals("") ? true : false;
+            flag = !tCoordenate.Equals("") ? true : false;
+            flag = !tDateHour.Equals("") ? true : false;
+            flag = !cMotivo.Text.Equals("") ? true : false;
+            flag = pTakePhoto.Image != null ? true : false;
+            return flag;
+        }
+        private void validaNumero(KeyPressEventArgs e)
+        {
+
+            if (Char.IsDigit(e.KeyChar)) e.Handled = false;
+            else if (Char.IsControl(e.KeyChar)) e.Handled = false;
+            else if (Char.IsSeparator(e.KeyChar)) e.Handled = false;
+            else e.Handled = true;
+        }
+
+        private void tCodeService_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaNumero(e);
         }
     }
 }

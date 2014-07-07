@@ -71,7 +71,7 @@
             // 
             this.panelSave.BackColor = System.Drawing.Color.Gray;
             this.panelSave.Controls.Add(this.label5);
-            this.panelSave.Location = new System.Drawing.Point(0, 239);
+            this.panelSave.Location = new System.Drawing.Point(0, 264);
             this.panelSave.Name = "panelSave";
             this.panelSave.Size = new System.Drawing.Size(120, 20);
             this.panelSave.Click += new System.EventHandler(this.panelSave_Click);
@@ -90,7 +90,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(111)))), ((int)(((byte)(222)))));
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Location = new System.Drawing.Point(0, 213);
+            this.panel2.Location = new System.Drawing.Point(0, 238);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(120, 20);
             // 
@@ -108,7 +108,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(88)))), ((int)(((byte)(203)))));
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(0, 187);
+            this.panel3.Location = new System.Drawing.Point(0, 212);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(120, 20);
             // 
@@ -126,7 +126,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(0, 161);
+            this.panel4.Location = new System.Drawing.Point(0, 186);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(120, 20);
             // 
@@ -144,7 +144,7 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))));
             this.panel5.Controls.Add(this.label1);
-            this.panel5.Location = new System.Drawing.Point(0, 135);
+            this.panel5.Location = new System.Drawing.Point(0, 160);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(120, 20);
             // 
@@ -163,7 +163,7 @@
             this.panelLoadPhoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))));
             this.panelLoadPhoto.Controls.Add(this.lblUploadPhoto);
             this.panelLoadPhoto.Controls.Add(this.pTakePhoto);
-            this.panelLoadPhoto.Location = new System.Drawing.Point(0, 56);
+            this.panelLoadPhoto.Location = new System.Drawing.Point(0, 81);
             this.panelLoadPhoto.Name = "panelLoadPhoto";
             this.panelLoadPhoto.Size = new System.Drawing.Size(120, 73);
             this.panelLoadPhoto.Click += new System.EventHandler(this.panelLoadPhoto_Click);
@@ -179,7 +179,6 @@
             // 
             // pTakePhoto
             // 
-            this.pTakePhoto.Image = ((System.Drawing.Image)(resources.GetObject("pTakePhoto.Image")));
             this.pTakePhoto.Location = new System.Drawing.Point(17, 0);
             this.pTakePhoto.Name = "pTakePhoto";
             this.pTakePhoto.Size = new System.Drawing.Size(73, 73);
@@ -190,7 +189,7 @@
             // 
             this.panel7.BackColor = System.Drawing.Color.Transparent;
             this.panel7.Controls.Add(this.tAdrres);
-            this.panel7.Location = new System.Drawing.Point(126, 80);
+            this.panel7.Location = new System.Drawing.Point(126, 105);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(120, 20);
             // 
@@ -209,7 +208,7 @@
             // 
             this.panel8.BackColor = System.Drawing.Color.Transparent;
             this.panel8.Controls.Add(this.tCodeService);
-            this.panel8.Location = new System.Drawing.Point(126, 135);
+            this.panel8.Location = new System.Drawing.Point(126, 160);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(120, 20);
             // 
@@ -223,12 +222,13 @@
             this.tCodeService.Size = new System.Drawing.Size(120, 21);
             this.tCodeService.TabIndex = 1;
             this.tCodeService.Text = "00023";
+            this.tCodeService.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tCodeService_KeyPress);
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.Transparent;
             this.panel9.Controls.Add(this.tDateHour);
-            this.panel9.Location = new System.Drawing.Point(126, 161);
+            this.panel9.Location = new System.Drawing.Point(126, 186);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(120, 20);
             // 
@@ -247,7 +247,7 @@
             // 
             this.panel10.BackColor = System.Drawing.Color.Transparent;
             this.panel10.Controls.Add(this.tCoordenate);
-            this.panel10.Location = new System.Drawing.Point(126, 187);
+            this.panel10.Location = new System.Drawing.Point(126, 212);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(120, 20);
             // 
@@ -267,7 +267,7 @@
             // 
             this.panel11.BackColor = System.Drawing.Color.Transparent;
             this.panel11.Controls.Add(this.cMotivo);
-            this.panel11.Location = new System.Drawing.Point(126, 213);
+            this.panel11.Location = new System.Drawing.Point(126, 238);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(115, 20);
             // 
@@ -289,14 +289,14 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(69, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(81, 11);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(66, 40);
+            this.pictureBox1.Size = new System.Drawing.Size(84, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             // 
             // back
             // 
-            this.back.Location = new System.Drawing.Point(0, 0);
+            this.back.Location = new System.Drawing.Point(0, 25);
             this.back.Name = "back";
             this.back.Size = new System.Drawing.Size(40, 40);
             this.back.Click += new System.EventHandler(this.back_Click);
@@ -320,7 +320,10 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelSave);
             this.Name = "NoAcces";
-            this.Size = new System.Drawing.Size(240, 268);
+            this.Size = new System.Drawing.Size(240, 320);
+            this.Click += new System.EventHandler(this.NoAcces_Click);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.NoAcces_KeyUp);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NoAcces_KeyPress);
             this.panelSave.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

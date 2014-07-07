@@ -32,15 +32,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
             this.PanelPrincipal = new System.Windows.Forms.Panel();
+            this.Timer = new System.Windows.Forms.Timer();
             this.SuspendLayout();
             // 
             // PanelPrincipal
             // 
             this.PanelPrincipal.AutoScroll = true;
+            this.PanelPrincipal.BackColor = System.Drawing.Color.White;
             this.PanelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelPrincipal.Location = new System.Drawing.Point(0, 0);
             this.PanelPrincipal.Name = "PanelPrincipal";
-            this.PanelPrincipal.Size = new System.Drawing.Size(240, 294);
+            this.PanelPrincipal.Size = new System.Drawing.Size(240, 320);
+            // 
+            // Timer
+            // 
+            this.Timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
             // Form1
             // 
@@ -48,17 +54,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(240, 294);
+            this.ClientSize = new System.Drawing.Size(240, 320);
             this.Controls.Add(this.PanelPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Location = new System.Drawing.Point(0, 0);
-            this.Menu = this.mainMenu1;
             this.Name = "Form1";
             this.Text = "LightMeter";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.ResumeLayout(false);
 
@@ -67,6 +71,7 @@
         #endregion
 
         public System.Windows.Forms.Panel PanelPrincipal;
+        private System.Windows.Forms.Timer Timer;
 
 
     }

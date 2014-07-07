@@ -21,25 +21,10 @@ namespace SmartDeviceProject1.interfaz
             this.panel2.Width = anchoPanel;
             this.panel3.Width = anchoPanel;
             this.panel4.Width = anchoPanel;
-            this.panel5.Width = anchoPanel;
+            this.pSave.Width = anchoPanel;
             this.panelNodata.Width = anchoPanel;
             this.tDateHour.Text = DateTime.Now.ToString("MM/dd/yy hh:mm");
-            this.tDateHour.ForeColor = Color.FromArgb(250, 128, 113);
-        }
-
-        private void TakeData_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel6_Click(object sender, EventArgs e)
-        {
-
+            //this.tDateHour.ForeColor = Color.FromArgb(250, 128, 113);
         }
 
         private void panel6_Click_1(object sender, EventArgs e)
@@ -48,11 +33,44 @@ namespace SmartDeviceProject1.interfaz
             this.main.PanelPrincipal.Controls.Add(new NoAcces(this.main));
         }
 
-        private void back_Click(object sender, EventArgs e)
-        {
-            this.main.PanelPrincipal.Controls.Clear();
-            this.main.PanelPrincipal.Controls.Add(new Welcome(this.main));
+        private Boolean validacionFormulario(){
+            Boolean flag = false;
+
+            flag = !tCodServ.Equals("") ? true : false;
+            flag = !tDateHour.Equals("") ? true : false;
+            flag = !tCoordenate.Equals("") ? true : false;
+            flag = !tReadActual.Equals("") ? true : false;
+
+            return flag;
         }
 
+        private void pSave_Click(object sender, EventArgs e)
+        {
+            if (validacionFormulario())
+            {
+                new Dialog(this.main).ShowDialog();
+            }
+            else {
+                MessageBox.Show("Verifique todos los campos.");
+            }
+        }
+
+        private void tCodServ_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaNumero(e);
+        }
+
+        private void tReadActual_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaNumero(e);
+        }
+
+        private void validaNumero(KeyPressEventArgs e){
+
+            if (Char.IsDigit(e.KeyChar)) e.Handled = false;
+            else if (Char.IsControl(e.KeyChar)) e.Handled = false;
+            else if (Char.IsSeparator(e.KeyChar)) e.Handled = false;
+            else e.Handled = true;
+        }
     }
 }

@@ -20,8 +20,6 @@ namespace SmartDeviceProject1.interfaz
             int dif_width = this.main.Width - this.Width;
             int dif_height = this.main.Height - this.Height;
 
-            this.Location = new Point((dif_height / 2), (dif_width / 2));
-
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)

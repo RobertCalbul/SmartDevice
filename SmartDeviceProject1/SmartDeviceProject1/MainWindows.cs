@@ -20,10 +20,11 @@ namespace SmartDeviceProject1
             InitializeComponent();
             _welcome = new Welcome(this);
             this.PanelPrincipal.Controls.Clear();
-            this.PanelPrincipal.Controls.Add(new NoAcces(this));
+            this.PanelPrincipal.Controls.Add(_welcome);
+            this.Timer.Enabled = true;
+            this.Timer.Interval = 1000;
             
         }
-
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
             if ((e.KeyCode == System.Windows.Forms.Keys.Up))
@@ -48,18 +49,19 @@ namespace SmartDeviceProject1
             }
 
         }
-
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-            //this.PanelPrincipal.Controls.Clear();
-            //this.PanelPrincipal.Controls.Add(new aaa().getPagel());
-        }
-
         private void menuItem1_Click(object sender, EventArgs e)
         {
             if (PanelPrincipal.Controls.Equals("Welcome")) MessageBox.Show("HOLA");
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            
+            if (Timer.Interval >= 1000) {
+                this.Timer.Dispose();
+                this.PanelPrincipal.Controls.Clear();
+                this.PanelPrincipal.Controls.Add(new TakeData(this));
+            }
         }
     }
 }

@@ -44,50 +44,50 @@
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.Icon.Image = ((System.Drawing.Image)(resources.GetObject("Icon.Image")));
-            this.Icon.Location = new System.Drawing.Point(73, 82);
+            this.Icon.Location = new System.Drawing.Point(72, 78);
             this.Icon.Name = "Icon";
-            this.Icon.Size = new System.Drawing.Size(100, 90);
+            this.Icon.Size = new System.Drawing.Size(107, 105);
             this.Icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(19)))), ((int)(((byte)(61)))));
-            this.panel1.Location = new System.Drawing.Point(0, 54);
+            this.panel1.Location = new System.Drawing.Point(0, 78);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(20, 20);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(99)))), ((int)(((byte)(74)))));
-            this.panel2.Location = new System.Drawing.Point(0, 79);
+            this.panel2.Location = new System.Drawing.Point(0, 103);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(20, 20);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(128)))), ((int)(((byte)(113)))));
-            this.panel3.Location = new System.Drawing.Point(0, 102);
+            this.panel3.Location = new System.Drawing.Point(0, 126);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(20, 20);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(129)))), ((int)(((byte)(128)))));
-            this.panel4.Location = new System.Drawing.Point(0, 127);
+            this.panel4.Location = new System.Drawing.Point(0, 151);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(20, 20);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
-            this.panel5.Location = new System.Drawing.Point(0, 152);
+            this.panel5.Location = new System.Drawing.Point(0, 176);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(20, 20);
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.Gray;
-            this.panel6.Location = new System.Drawing.Point(0, 199);
+            this.panel6.Location = new System.Drawing.Point(0, 223);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(20, 20);
             this.panel6.Click += new System.EventHandler(this.panel6_Click);
@@ -105,7 +105,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Icon);
             this.Name = "Welcome";
-            this.Size = new System.Drawing.Size(240, 268);
+            this.Size = new System.Drawing.Size(240, 320);
             this.ResumeLayout(false);
 
         }
