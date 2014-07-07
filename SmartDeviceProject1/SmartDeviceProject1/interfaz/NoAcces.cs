@@ -28,25 +28,20 @@ namespace SmartDeviceProject1.interfaz
 
         private void panelLoadPhoto_Click(object sender, EventArgs e)
         {
-            this.pTakePhoto.Visible = true;
-            this.lblUploadPhoto.Visible = false;
-            //MessageBox.Show(CameraPresent().ToString());
             CameraCapture(true);
         }
-        public bool CameraPresent()
+    /*    public bool CameraPresent()
 	{
 	    return SystemState.CameraPresent;
-	}
+	}*/
         private void CameraCapture(bool video)
         {
             CameraCaptureDialog cameraCapture = new CameraCaptureDialog();
-
-            //Control that owns the CameraCaptureDialog.
+           
             cameraCapture.Owner = this;
-            //Directory to save the captured media.
             cameraCapture.InitialDirectory = @"\My Documents";
             //Header title.
-            cameraCapture.Title = "Camera Demo";
+            cameraCapture.Title = "Camera";
             //Video clip quality.
             cameraCapture.VideoTypes = CameraCaptureVideoTypes.Messaging;
             //Camera resolution.
@@ -54,28 +49,39 @@ namespace SmartDeviceProject1.interfaz
             // Limited to 15 seconds of video.
             cameraCapture.VideoTimeLimit = new TimeSpan(0, 0, 15);
             //Set capture mode to Video with audio if parameter video is true,
-            //else set capture mode to still image.
-            if (video)
-            {
-                cameraCapture.Mode = CameraCaptureMode.VideoWithAudio;
-                cameraCapture.DefaultFileName = @"videotest.3gp";
-            }
-            else
-            {
-                cameraCapture.Mode = CameraCaptureMode.Still;
-                cameraCapture.DefaultFileName = @"imagetest.jpg";
-            }
-
+            //else set capture mode to still image.e);
+            cameraCapture.Mode = CameraCaptureMode.Still;
+            cameraCapture.DefaultFileName = @"Photo "+DateTime.Now.ToString("MMddyyhhmm")+".jpg";
             if (DialogResult.OK == cameraCapture.ShowDialog())
             {
-                //CameraCaptureDialog is completed and will return to
-                //your application.
-                //If you want to do something special when returning
-                //from CameraCaptureDialog you can do it here.
+                if (!cameraCapture.FileName.Equals(""))
+                {
+                    this.pTakePhoto.Image = new Bitmap(cameraCapture.FileName);
+                    this.lblUploadPhoto.Visible = false;
+                    this.pTakePhoto.Visible = true;
+                }
+                else
+                {
+                    this.lblUploadPhoto.Visible = false;
+                    this.pTakePhoto.Visible = true;
+                    MessageBox.Show("Presione la tecla ENT para capturar foto");
+                }
             }
+           
+            /* if (video)
+             {
+                 cameraCapture.Mode = CameraCaptureMode.VideoWithAudio;
+                 cameraCapture.DefaultFileName = @"videotest.3gp";
+             }
+             else
+             {
+                 cameraCapture.Mode = CameraCaptureMode.Still;
+                 cameraCapture.DefaultFileName = @"imagetest.jpg";
+             }
+         */
         }
-      private void back_Click(object sender, EventArgs e)
-       {
+        private void back_Click(object sender, EventArgs e)
+        {
             this.main.PanelPrincipal.Controls.Clear();
             this.main.PanelPrincipal.Controls.Add(new TakeData(this.main));
         }

@@ -30,29 +30,29 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NoAcces));
             this.panelSave = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panelLoadPhoto = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.tAdrres = new System.Windows.Forms.TextBox();
-            this.tCodeService = new System.Windows.Forms.TextBox();
-            this.tDateHour = new System.Windows.Forms.TextBox();
-            this.tCoordenate = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.cMotivo = new System.Windows.Forms.ComboBox();
-            this.pTakePhoto = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelLoadPhoto = new System.Windows.Forms.Panel();
             this.lblUploadPhoto = new System.Windows.Forms.Label();
+            this.pTakePhoto = new System.Windows.Forms.PictureBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.tAdrres = new System.Windows.Forms.TextBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.tCodeService = new System.Windows.Forms.TextBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.tDateHour = new System.Windows.Forms.TextBox();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.tCoordenate = new System.Windows.Forms.TextBox();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.cMotivo = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.back = new System.Windows.Forms.Panel();
             this.panelSave.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -76,6 +76,16 @@
             this.panelSave.Size = new System.Drawing.Size(120, 20);
             this.panelSave.Click += new System.EventHandler(this.panelSave_Click);
             // 
+            // label5
+            // 
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(0, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(120, 20);
+            this.label5.Text = "GUARDAR";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(111)))), ((int)(((byte)(222)))));
@@ -83,6 +93,16 @@
             this.panel2.Location = new System.Drawing.Point(0, 213);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(120, 20);
+            // 
+            // label4
+            // 
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(120, 20);
+            this.label4.Text = "MOTIVO ";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // panel3
             // 
@@ -92,6 +112,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(120, 20);
             // 
+            // label3
+            // 
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(120, 20);
+            this.label3.Text = "COORDENADAS";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.DarkSlateBlue;
@@ -100,6 +130,16 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(120, 20);
             // 
+            // label2
+            // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(120, 20);
+            this.label2.Text = "FECHA Y HORA";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(0)))), ((int)(((byte)(128)))));
@@ -107,6 +147,16 @@
             this.panel5.Location = new System.Drawing.Point(0, 135);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(120, 20);
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 20);
+            this.label1.Text = "CODIGO SERVICIO";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // panelLoadPhoto
             // 
@@ -118,6 +168,24 @@
             this.panelLoadPhoto.Size = new System.Drawing.Size(120, 73);
             this.panelLoadPhoto.Click += new System.EventHandler(this.panelLoadPhoto_Click);
             // 
+            // lblUploadPhoto
+            // 
+            this.lblUploadPhoto.ForeColor = System.Drawing.Color.White;
+            this.lblUploadPhoto.Location = new System.Drawing.Point(3, 36);
+            this.lblUploadPhoto.Name = "lblUploadPhoto";
+            this.lblUploadPhoto.Size = new System.Drawing.Size(120, 20);
+            this.lblUploadPhoto.Text = "SUBIR FOTO";
+            this.lblUploadPhoto.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // pTakePhoto
+            // 
+            this.pTakePhoto.Image = ((System.Drawing.Image)(resources.GetObject("pTakePhoto.Image")));
+            this.pTakePhoto.Location = new System.Drawing.Point(17, 0);
+            this.pTakePhoto.Name = "pTakePhoto";
+            this.pTakePhoto.Size = new System.Drawing.Size(73, 73);
+            this.pTakePhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pTakePhoto.Visible = false;
+            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.Transparent;
@@ -125,38 +193,6 @@
             this.panel7.Location = new System.Drawing.Point(126, 80);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(120, 20);
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.Transparent;
-            this.panel8.Controls.Add(this.tCodeService);
-            this.panel8.Location = new System.Drawing.Point(126, 135);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(120, 20);
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.Transparent;
-            this.panel9.Controls.Add(this.tDateHour);
-            this.panel9.Location = new System.Drawing.Point(126, 161);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(120, 20);
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.Transparent;
-            this.panel10.Controls.Add(this.tCoordenate);
-            this.panel10.Location = new System.Drawing.Point(126, 187);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(120, 20);
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.Transparent;
-            this.panel11.Controls.Add(this.cMotivo);
-            this.panel11.Location = new System.Drawing.Point(126, 213);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(115, 20);
             // 
             // tAdrres
             // 
@@ -169,6 +205,14 @@
             this.tAdrres.TabIndex = 0;
             this.tAdrres.Text = "San Martin Nº4532";
             // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Transparent;
+            this.panel8.Controls.Add(this.tCodeService);
+            this.panel8.Location = new System.Drawing.Point(126, 135);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(120, 20);
+            // 
             // tCodeService
             // 
             this.tCodeService.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -180,17 +224,32 @@
             this.tCodeService.TabIndex = 1;
             this.tCodeService.Text = "00023";
             // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Transparent;
+            this.panel9.Controls.Add(this.tDateHour);
+            this.panel9.Location = new System.Drawing.Point(126, 161);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(120, 20);
+            // 
             // tDateHour
             // 
             this.tDateHour.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tDateHour.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tDateHour.Enabled = false;
             this.tDateHour.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.tDateHour.Location = new System.Drawing.Point(0, 0);
             this.tDateHour.Name = "tDateHour";
             this.tDateHour.Size = new System.Drawing.Size(120, 21);
             this.tDateHour.TabIndex = 1;
             this.tDateHour.Text = "30/06/14 15:11";
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.Transparent;
+            this.panel10.Controls.Add(this.tCoordenate);
+            this.panel10.Location = new System.Drawing.Point(126, 187);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(120, 20);
             // 
             // tCoordenate
             // 
@@ -204,55 +263,13 @@
             this.tCoordenate.TabIndex = 1;
             this.tCoordenate.Text = "ltd: 39.1º N         lgtd: 11.1ºW";
             // 
-            // label1
+            // panel11
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 20);
-            this.label1.Text = "CODIGO SERVICIO";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label2
-            // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 20);
-            this.label2.Text = "FECHA Y HORA";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label3
-            // 
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 20);
-            this.label3.Text = "COORDENADAS";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label4
-            // 
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 20);
-            this.label4.Text = "MOTIVO ";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label5
-            // 
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(0, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(120, 20);
-            this.label5.Text = "GUARDAR";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.panel11.BackColor = System.Drawing.Color.Transparent;
+            this.panel11.Controls.Add(this.cMotivo);
+            this.panel11.Location = new System.Drawing.Point(126, 213);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(115, 20);
             // 
             // cMotivo
             // 
@@ -269,15 +286,6 @@
             this.cMotivo.Size = new System.Drawing.Size(115, 22);
             this.cMotivo.TabIndex = 0;
             // 
-            // pTakePhoto
-            // 
-            this.pTakePhoto.Image = ((System.Drawing.Image)(resources.GetObject("pTakePhoto.Image")));
-            this.pTakePhoto.Location = new System.Drawing.Point(17, 0);
-            this.pTakePhoto.Name = "pTakePhoto";
-            this.pTakePhoto.Size = new System.Drawing.Size(73, 73);
-            this.pTakePhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pTakePhoto.Visible = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -285,15 +293,6 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(66, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            // 
-            // lblUploadPhoto
-            // 
-            this.lblUploadPhoto.ForeColor = System.Drawing.Color.White;
-            this.lblUploadPhoto.Location = new System.Drawing.Point(3, 36);
-            this.lblUploadPhoto.Name = "lblUploadPhoto";
-            this.lblUploadPhoto.Size = new System.Drawing.Size(120, 20);
-            this.lblUploadPhoto.Text = "SUBIR FOTO";
-            this.lblUploadPhoto.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // back
             // 

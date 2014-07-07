@@ -20,7 +20,7 @@ namespace SmartDeviceProject1
             InitializeComponent();
             _welcome = new Welcome(this);
             this.PanelPrincipal.Controls.Clear();
-            this.PanelPrincipal.Controls.Add(_welcome);
+            this.PanelPrincipal.Controls.Add(new NoAcces(this));
             
         }
 
