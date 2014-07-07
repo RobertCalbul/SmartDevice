@@ -8,13 +8,24 @@ C:\Users\Robert\Documents\Visual Studio 2008\Projects\SmartDeviceProject1\SmartD
 C:\Users\Robert\Documents\Visual Studio 2008\Projects\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\SmartDeviceProject1.Form1.resources
 C:\Users\Robert\Documents\Visual Studio 2008\Projects\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\SmartDeviceProject1.interfaz_NoDatos.resources
 C:\Users\Robert\Documents\Visual Studio 2008\Projects\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\SmartDeviceProject1.interfaz_SiDatos.resources
-C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\bin\Debug\SmartDeviceProject1.exe
-C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\bin\Debug\SmartDeviceProject1.pdb
 C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\SmartDeviceProject1.Form1.resources
-C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\SmartDeviceProject1.interfaz_NoDatos.resources
-C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\SmartDeviceProject1.interfaz_SiDatos.resources
-C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\SmartDeviceProject1.Properties.Resources.resources
 C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\SmartDeviceProject1.csproj.GenerateResource.Cache
-C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\SmartDeviceProject1.exe
-C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\SmartDeviceProject1.pdb
+C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\SmartDeviceProject1.interfaz.Welcome.resources
+C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\SmartDeviceProject1.interfaz.TakeData.resources
+C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\SmartDeviceProject1.interfaz.NoAcces.resources
+C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\SmartDeviceProject1.interfaz.Dialog.resources
+C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\SmartDeviceProject1.interfaz.Dialog.es-CL.resources
+C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\bin\Debug\LightMeter.exe
+C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\bin\Debug\LightMeter.pdb
+C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\bin\Debug\es-CL\LightMeter.resources.dll
+C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\LightMeter.Properties.Resources.resources
+C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\es-CL\LightMeter.resources.dll
+C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\LightMeter.exe
+C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\obj\Debug\LightMeter.pdb
+C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\bin\Debug\Microsoft.WindowsMobile.Forms.dll
+C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\bin\Debug\Microsoft.WindowsMobile.Status.dll
+C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\bin\Debug\Microsoft.WindowsMobile.PocketOutlook.dll
+C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\bin\Debug\Microsoft.WindowsMobile.dll
+C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\bin\Debug\Microsoft.WindowsMobile.PocketOutlook.xml
+C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\bin\Debug\Microsoft.WindowsMobile.xml

@@ -3,7 +3,7 @@
 "VSVersion" = "3:701"
 "ProjectType" = "8:{AB322303-2255-48EF-A496-5904EB18DA55}"
 "IsWebType" = "8:FALSE"
-"ProjectName" = "8:SmartDeviceCab"
+"ProjectName" = "8:LighMeter"
 "LanguageId" = "3:3082"
 "CodePage" = "3:1252"
 "SccProjectName" = "8:"
@@ -15,13 +15,31 @@
         "Entry"
         {
         "MsmKey" = "8:_068BA5182BAECFD2792DCF1BEAC21B03"
-        "OwnerKey" = "8:_A45BC630952D4D1EB9A64B1840E97578"
+        "OwnerKey" = "8:_84B2BD07B3D74CBEB7CDA291FFBDCDF3"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2BB1181662DAE206C376087B9283165E"
+        "OwnerKey" = "8:_84B2BD07B3D74CBEB7CDA291FFBDCDF3"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2BB1181662DAE206C376087B9283165E"
+        "OwnerKey" = "8:_C13FE10D87A2224821B33AE3AEB0A5A0"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2BB1181662DAE206C376087B9283165E"
+        "OwnerKey" = "8:_9801D9F89CC7092B0CF98095670C478B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_2C743961A1ACD5F75984CA5201011151"
-        "OwnerKey" = "8:_A45BC630952D4D1EB9A64B1840E97578"
+        "OwnerKey" = "8:_84B2BD07B3D74CBEB7CDA291FFBDCDF3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -81,19 +99,43 @@
         "Entry"
         {
         "MsmKey" = "8:_2CC4C7379CD065C12CDF434BD1822A89"
-        "OwnerKey" = "8:_A45BC630952D4D1EB9A64B1840E97578"
+        "OwnerKey" = "8:_84B2BD07B3D74CBEB7CDA291FFBDCDF3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_4EF7B7595EE038DD6CF5398981729304"
-        "OwnerKey" = "8:_A45BC630952D4D1EB9A64B1840E97578"
+        "OwnerKey" = "8:_84B2BD07B3D74CBEB7CDA291FFBDCDF3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_A45BC630952D4D1EB9A64B1840E97578"
+        "MsmKey" = "8:_6E6BCF568E015176886E90081F729A2C"
+        "OwnerKey" = "8:_84B2BD07B3D74CBEB7CDA291FFBDCDF3"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_84B2BD07B3D74CBEB7CDA291FFBDCDF3"
         "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9801D9F89CC7092B0CF98095670C478B"
+        "OwnerKey" = "8:_84B2BD07B3D74CBEB7CDA291FFBDCDF3"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9801D9F89CC7092B0CF98095670C478B"
+        "OwnerKey" = "8:_C13FE10D87A2224821B33AE3AEB0A5A0"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9801D9F89CC7092B0CF98095670C478B"
+        "OwnerKey" = "8:_6E6BCF568E015176886E90081F729A2C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -105,25 +147,31 @@
         "Entry"
         {
         "MsmKey" = "8:_B8A07176CFE797B48F28C7A4EFBEF728"
-        "OwnerKey" = "8:_BC47F9753835D40E17A80DC9BBC92762"
+        "OwnerKey" = "8:_84B2BD07B3D74CBEB7CDA291FFBDCDF3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_B8A07176CFE797B48F28C7A4EFBEF728"
-        "OwnerKey" = "8:_A45BC630952D4D1EB9A64B1840E97578"
+        "OwnerKey" = "8:_BC47F9753835D40E17A80DC9BBC92762"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_BC47F9753835D40E17A80DC9BBC92762"
-        "OwnerKey" = "8:_A45BC630952D4D1EB9A64B1840E97578"
+        "OwnerKey" = "8:_84B2BD07B3D74CBEB7CDA291FFBDCDF3"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C13FE10D87A2224821B33AE3AEB0A5A0"
+        "OwnerKey" = "8:_84B2BD07B3D74CBEB7CDA291FFBDCDF3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_E0A8968A81EA9FFC901AC541F04E043A"
-        "OwnerKey" = "8:_A45BC630952D4D1EB9A64B1840E97578"
+        "OwnerKey" = "8:_84B2BD07B3D74CBEB7CDA291FFBDCDF3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -141,7 +189,7 @@
         "Entry"
         {
         "MsmKey" = "8:_FD0AA0A3C2EFCE5E7528E7F8A115D885"
-        "OwnerKey" = "8:_A45BC630952D4D1EB9A64B1840E97578"
+        "OwnerKey" = "8:_84B2BD07B3D74CBEB7CDA291FFBDCDF3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -159,13 +207,13 @@
         "Entry"
         {
         "MsmKey" = "8:_FE2957283E40700288121C1B630FE3E7"
-        "OwnerKey" = "8:_4EF7B7595EE038DD6CF5398981729304"
+        "OwnerKey" = "8:_84B2BD07B3D74CBEB7CDA291FFBDCDF3"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_FE2957283E40700288121C1B630FE3E7"
-        "OwnerKey" = "8:_A45BC630952D4D1EB9A64B1840E97578"
+        "OwnerKey" = "8:_4EF7B7595EE038DD6CF5398981729304"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -219,6 +267,34 @@
                     }
                 }
             "SourcePath" = "8:System.Data.DataSetExtensions.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_95CB86883A3A493D87755459D201C44B"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{E4F2F62A-3940-4BF5-A031-F7FA98CAAFFA}:_2BB1181662DAE206C376087B9283165E"
+            {
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Microsoft.WindowsMobile, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+                "ScatterAssemblies"
+                {
+                    "_2BB1181662DAE206C376087B9283165E"
+                    {
+                    "Name" = "8:Microsoft.WindowsMobile.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Microsoft.WindowsMobile.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_95CB86883A3A493D87755459D201C44B"
@@ -318,6 +394,62 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{E4F2F62A-3940-4BF5-A031-F7FA98CAAFFA}:_6E6BCF568E015176886E90081F729A2C"
+            {
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Microsoft.WindowsMobile.Forms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+                "ScatterAssemblies"
+                {
+                    "_6E6BCF568E015176886E90081F729A2C"
+                    {
+                    "Name" = "8:Microsoft.WindowsMobile.Forms.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Microsoft.WindowsMobile.Forms.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_95CB86883A3A493D87755459D201C44B"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{E4F2F62A-3940-4BF5-A031-F7FA98CAAFFA}:_9801D9F89CC7092B0CF98095670C478B"
+            {
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Microsoft.WindowsMobile.PocketOutlook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+                "ScatterAssemblies"
+                {
+                    "_9801D9F89CC7092B0CF98095670C478B"
+                    {
+                    "Name" = "8:Microsoft.WindowsMobile.PocketOutlook.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Microsoft.WindowsMobile.PocketOutlook.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_95CB86883A3A493D87755459D201C44B"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{E4F2F62A-3940-4BF5-A031-F7FA98CAAFFA}:_B8A07176CFE797B48F28C7A4EFBEF728"
             {
             "AssemblyIsInGAC" = "11:FALSE"
@@ -359,6 +491,34 @@
                     }
                 }
             "SourcePath" = "8:System.Xml.Linq.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_95CB86883A3A493D87755459D201C44B"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{E4F2F62A-3940-4BF5-A031-F7FA98CAAFFA}:_C13FE10D87A2224821B33AE3AEB0A5A0"
+            {
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Microsoft.WindowsMobile.Status, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
+                "ScatterAssemblies"
+                {
+                    "_C13FE10D87A2224821B33AE3AEB0A5A0"
+                    {
+                    "Name" = "8:Microsoft.WindowsMobile.Status.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Microsoft.WindowsMobile.Status.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_95CB86883A3A493D87755459D201C44B"
@@ -461,6 +621,24 @@
         }
         "Folder"
         {
+            "{F6DFDB62-1DD1-498B-89B7-27BAC542EE5A}:_0465CCBC2346467B90F7479A8595DBD8"
+            {
+            "Name" = "8:#1916"
+            "Condition" = "8:"
+            "Property" = "8:%CE11%"
+                "Folders"
+                {
+                }
+            }
+            "{F6DFDB62-1DD1-498B-89B7-27BAC542EE5A}:_767B7196615141AD91ABF02F5A2543D3"
+            {
+            "Name" = "8:#1919"
+            "Condition" = "8:"
+            "Property" = "8:%CE17%"
+                "Folders"
+                {
+                }
+            }
             "{D5B00AC1-E6C3-4CC5-90FF-8E0F53D9E5E0}:_95CB86883A3A493D87755459D201C44B"
             {
             "DefaultLocation" = "8:%InstallDir%"
@@ -494,9 +672,9 @@
         }
         "ProjectOutput"
         {
-            "{605BE39E-5046-48BD-AEC0-63C3A46626D5}:_A45BC630952D4D1EB9A64B1840E97578"
+            "{605BE39E-5046-48BD-AEC0-63C3A46626D5}:_84B2BD07B3D74CBEB7CDA291FFBDCDF3"
             {
-            "SourcePath" = "8:..\\SmartDeviceProject1\\obj\\Debug\\SmartDeviceProject1.exe"
+            "SourcePath" = "8:..\\SmartDeviceProject1\\obj\\Debug\\LightMeter.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_95CB86883A3A493D87755459D201C44B"
@@ -556,6 +734,16 @@
         }
         "Shortcut"
         {
+            "{971D45E9-E38C-49AC-B36E-4C5BEA533350}:_D8DB809715764344992B39ECF77388AC"
+            {
+            "Name" = "8:LIGMETER PRO"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "Target" = "8:_84B2BD07B3D74CBEB7CDA291FFBDCDF3"
+            "Folder" = "8:_0465CCBC2346467B90F7479A8595DBD8"
+            "WorkingFolder" = "8:_95CB86883A3A493D87755459D201C44B"
+            }
         }
     }
 }

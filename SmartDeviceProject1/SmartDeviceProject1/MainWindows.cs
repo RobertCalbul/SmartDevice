@@ -6,18 +6,22 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using SmartDeviceProject1.interfaz;
+using System.Threading;
+
 
 namespace SmartDeviceProject1
 {
     public partial class Form1 : Form
     {
-        private interfaz_NoDatos _NoIngreso;
-        private interfaz_SiDatos _SiIngreso;
+        private Welcome _welcome;
         public Form1()
         {
             InitializeComponent();
-            _NoIngreso = new interfaz_NoDatos();
-            _SiIngreso = new interfaz_SiDatos();
+            _welcome = new Welcome(this);
+            this.PanelPrincipal.Controls.Clear();
+            this.PanelPrincipal.Controls.Add(_welcome);
+            
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -45,16 +49,17 @@ namespace SmartDeviceProject1
 
         }
 
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+
+        private void Form1_Load(object sender, EventArgs e)
         {
-            this.PanelPrincipal.Controls.Clear();
-            this.PanelPrincipal.Controls.Add(_NoIngreso);
+
+            //this.PanelPrincipal.Controls.Clear();
+            //this.PanelPrincipal.Controls.Add(new aaa().getPagel());
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        private void menuItem1_Click(object sender, EventArgs e)
         {
-            this.PanelPrincipal.Controls.Clear();
-            this.PanelPrincipal.Controls.Add(_SiIngreso);
+            if (PanelPrincipal.Controls.Equals("Welcome")) MessageBox.Show("HOLA");
         }
     }
 }
