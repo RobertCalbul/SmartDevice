@@ -88,7 +88,7 @@
             this.panelNodata.BackColor = System.Drawing.Color.Gray;
             this.panelNodata.Controls.Add(this.label6);
             this.panelNodata.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelNodata.Location = new System.Drawing.Point(0, 300);
+            this.panelNodata.Location = new System.Drawing.Point(0, 260);
             this.panelNodata.Name = "panelNodata";
             this.panelNodata.Size = new System.Drawing.Size(240, 20);
             this.panelNodata.Click += new System.EventHandler(this.panel6_Click_1);
@@ -286,7 +286,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel7);
             this.Name = "TakeData";
-            this.Size = new System.Drawing.Size(240, 320);
+            this.Size = new System.Drawing.Size(240, 280);
             this.panel7.ResumeLayout(false);
             this.panelNodata.ResumeLayout(false);
             this.pSave.ResumeLayout(false);

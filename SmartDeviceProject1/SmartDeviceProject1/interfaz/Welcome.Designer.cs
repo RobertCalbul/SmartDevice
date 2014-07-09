@@ -44,9 +44,9 @@
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.Icon.Image = ((System.Drawing.Image)(resources.GetObject("Icon.Image")));
-            this.Icon.Location = new System.Drawing.Point(72, 78);
+            this.Icon.Location = new System.Drawing.Point(68, 91);
             this.Icon.Name = "Icon";
-            this.Icon.Size = new System.Drawing.Size(107, 105);
+            this.Icon.Size = new System.Drawing.Size(111, 81);
             this.Icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             // 
             // panel1
@@ -105,7 +105,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Icon);
             this.Name = "Welcome";
-            this.Size = new System.Drawing.Size(240, 320);
+            this.Size = new System.Drawing.Size(240, 280);
             this.ResumeLayout(false);
 
         }

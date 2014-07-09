@@ -27,6 +27,7 @@ namespace SmartDeviceProject1
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
+            
             if ((e.KeyCode == System.Windows.Forms.Keys.Up))
             {
                 // Up

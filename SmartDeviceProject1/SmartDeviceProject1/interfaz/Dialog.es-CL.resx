@@ -121,7 +121,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAegAAAFQCAYAAAB0ye0UAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAACw4AAAsOAUC+4UEAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8
+        YQUAAAAJcEhZcwAACw0AAAsNAe0HwCwAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8
         AABI1UlEQVR4Xu2dTahuyXWejTBCQghLGCFZKKaRjTBujBsLBV0hIyEsrgxRaIzTA03SIY09CjRKwGSU
         O9RI9NTQA41CaDJonEmTQNCsJ4ZokBsSiKGhPTAhMepkmMDN+x5/dbRPnfV9+6fWqr/9Dp7ue+rbu/52
         7XqrVq2q/UsvXrw4Lb/+67/+CngdPAM/AT/NYBh/exW8ZMUhhBBCRGAGzgyElqL8FvgAvNgJ7+G9r1hx
@@ -447,5 +447,8 @@
   </data>
   <data name="btnAceptar.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 222</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>240, 280</value>
   </data>
 </root>

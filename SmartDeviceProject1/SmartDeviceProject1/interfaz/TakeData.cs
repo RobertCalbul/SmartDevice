@@ -7,6 +7,7 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 using System.Reflection;
+using LightMeter.Clases;
 
 namespace SmartDeviceProject1.interfaz
 {
@@ -49,8 +50,15 @@ namespace SmartDeviceProject1.interfaz
         {   //MessageBox.Show("click "+ validacionFormulario());
             if (validacionFormulario())
             {
+                int code = int.Parse(this.tCodServ.Text.Trim());
+                int read_actual = int.Parse(this.tReadActual.Text.Trim());
+                String date = this.tDateHour.Text.Trim();
+                String coordenate = this.tCoordenate.Text.Trim();
 
-                new Dialog(this.main).ShowDialog();
+                if (new Take_Data(code, read_actual, date, coordenate).create_file_take_data() > 0)
+                {
+                    new Dialog(this.main).ShowDialog();
+                }
             }
             else {
                 MessageBox.Show("Verifique todos los campos.");

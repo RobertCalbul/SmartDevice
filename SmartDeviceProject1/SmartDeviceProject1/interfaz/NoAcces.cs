@@ -8,12 +8,14 @@ using System.Text;
 using System.Windows.Forms;
 using Microsoft.WindowsMobile.Forms;
 using Microsoft.WindowsMobile.Status;
+using LightMeter.Clases;
 
 namespace SmartDeviceProject1.interfaz
 {
     public partial class NoAcces : UserControl
     {
         Form1 main;
+        private String file_name;
         public NoAcces(Form1 main)
         {
             InitializeComponent();
@@ -24,12 +26,24 @@ namespace SmartDeviceProject1.interfaz
         private void panelSave_Click(object sender, EventArgs e)
         {
             if (validacionFormulario())
-                new Dialog(this.main).ShowDialog();
+            {
+                int code_service = int.Parse(this.tCodeService.Text.Trim());
+                String adress = this.tAdrres.Text.Trim();
+                String hour_date = this.tDateHour.Text.Trim();
+                String coordenate = this.tCoordenate.Text.Trim();
+                String movite = this.cMotivo.SelectedItem.ToString();
+
+                if (new Take_Data(code_service, adress, hour_date, coordenate, movite, file_name).create_File_No_Data() > 0)
+                {
+                    new Dialog(this.main).ShowDialog();
+                }
+            }
             else MessageBox.Show("Verifique todos los campo.");
         }
 
         private void panelLoadPhoto_Click(object sender, EventArgs e)
         {
+            this.file_name = "";
             CameraCapture(true);
         }
     /*    public bool CameraPresent()
@@ -58,9 +72,11 @@ namespace SmartDeviceProject1.interfaz
             {
                 if (!cameraCapture.FileName.Equals(""))
                 {
+
                     this.pTakePhoto.Image = new Bitmap(cameraCapture.FileName);
                     this.lblUploadPhoto.Visible = false;
                     this.pTakePhoto.Visible = true;
+                    this.file_name = cameraCapture.FileName;
                 }
                 else
                 {
@@ -110,6 +126,11 @@ namespace SmartDeviceProject1.interfaz
         private void tCodeService_KeyPress(object sender, KeyPressEventArgs e)
         {
             validaNumero(e);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

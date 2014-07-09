@@ -276,11 +276,15 @@
             this.cMotivo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.cMotivo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cMotivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(111)))), ((int)(((byte)(222)))));
-            this.cMotivo.Items.Add("Seleccionar");
-            this.cMotivo.Items.Add("Perros sueltos");
-            this.cMotivo.Items.Add("Candado entrada");
-            this.cMotivo.Items.Add("Señora mal genio");
-            this.cMotivo.Items.Add("asquito");
+            this.cMotivo.Items.Add("Motivo 1");
+            this.cMotivo.Items.Add("Motivo 2");
+            this.cMotivo.Items.Add("Motivo 3");
+            this.cMotivo.Items.Add("Motivo 4");
+            this.cMotivo.Items.Add("Motivo 5");
+            this.cMotivo.Items.Add("Motivo 6");
+            this.cMotivo.Items.Add("Motivo 7");
+            this.cMotivo.Items.Add("Motivo 8");
+            this.cMotivo.Items.Add("Motivo 9");
             this.cMotivo.Location = new System.Drawing.Point(0, 0);
             this.cMotivo.Name = "cMotivo";
             this.cMotivo.Size = new System.Drawing.Size(115, 22);
@@ -293,6 +297,7 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(84, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // back
             // 
@@ -320,7 +325,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelSave);
             this.Name = "NoAcces";
-            this.Size = new System.Drawing.Size(240, 320);
+            this.Size = new System.Drawing.Size(240, 280);
             this.panelSave.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
