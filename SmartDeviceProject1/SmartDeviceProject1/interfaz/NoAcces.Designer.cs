@@ -203,6 +203,7 @@
             this.tAdrres.Size = new System.Drawing.Size(120, 21);
             this.tAdrres.TabIndex = 0;
             this.tAdrres.Text = "San Martin Nº4532";
+            this.tAdrres.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tAdrres_KeyDown);
             // 
             // panel8
             // 

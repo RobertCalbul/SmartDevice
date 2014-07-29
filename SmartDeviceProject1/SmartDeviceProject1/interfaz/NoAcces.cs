@@ -15,10 +15,12 @@ namespace SmartDeviceProject1.interfaz
     public partial class NoAcces : UserControl
     {
         Form1 main;
+        private GoogleMap Gm;
         private String file_name;
         public NoAcces(Form1 main)
         {
             InitializeComponent();
+            this.Gm = new GoogleMap();
             this.main = main;
             this.tDateHour.Text = DateTime.Now.ToString("MM/dd/yy hh:mm");
         }
@@ -131,6 +133,11 @@ namespace SmartDeviceProject1.interfaz
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tAdrres_KeyDown(object sender, KeyEventArgs e)
+        {
+            String [] point = this.Gm.loadLatitudLatitud(this.Gm.geoURL(this.tAdrres.Text.Trim()));            
         }
     }
 }
