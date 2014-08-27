@@ -8,13 +8,14 @@ using System.Text;
 using System.Windows.Forms;
 using SmartDeviceProject1.interfaz;
 using System.Threading;
-
+using Microsoft.WindowsMobile.Samples.Location;
 
 namespace SmartDeviceProject1
 {
     public partial class Form1 : Form
     {
         private Welcome _welcome;
+        public Gps objGps;
         public Form1()
         {
             InitializeComponent();
@@ -23,6 +24,7 @@ namespace SmartDeviceProject1
             this.PanelPrincipal.Controls.Add(_welcome);
             this.Timer.Enabled = true;
             this.Timer.Interval = 1000;
+            objGps = new Gps();
             
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)

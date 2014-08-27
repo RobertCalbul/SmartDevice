@@ -203,7 +203,6 @@
             this.tAdrres.Size = new System.Drawing.Size(120, 21);
             this.tAdrres.TabIndex = 0;
             this.tAdrres.Text = "San Martin Nº4532";
-            this.tAdrres.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tAdrres_KeyDown);
             // 
             // panel8
             // 
@@ -298,7 +297,6 @@
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(84, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // back
             // 

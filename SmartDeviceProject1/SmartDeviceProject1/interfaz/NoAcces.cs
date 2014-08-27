@@ -9,21 +9,59 @@ using System.Windows.Forms;
 using Microsoft.WindowsMobile.Forms;
 using Microsoft.WindowsMobile.Status;
 using LightMeter.Clases;
+using Microsoft.WindowsMobile.Samples.Location;
 
 namespace SmartDeviceProject1.interfaz
 {
     public partial class NoAcces : UserControl
     {
         Form1 main;
-        private GoogleMap Gm;
         private String file_name;
+        private Gps objGps;
         public NoAcces(Form1 main)
         {
             InitializeComponent();
-            this.Gm = new GoogleMap();
             this.main = main;
             this.tDateHour.Text = DateTime.Now.ToString("MM/dd/yy hh:mm");
+
+
+            objGps = this.main.objGps;// new Gps();
+            if (!objGps.Opened)
+            {
+                // objgps.DeviceStateChanged += new DeviceStateChangedEventHandler(gps_DeviceStateChange);
+                objGps.LocationChanged += new LocationChangedEventHandler(gps_LocationChanged);
+                objGps.Open();
+            }
         }
+        private void gps_LocationChanged(object sender, LocationChangedEventArgs args)
+        {
+            //this.tCoordenate.Text = "";
+            GpsPosition position = args.Position;
+            ControlUpdater cu = UpdateControl;
+            if (position.LatitudeValid && position.LongitudeValid)
+            {
+                Invoke(cu, tCoordenate, position.Latitude.ToString() + " " + position.Longitude.ToString());
+                MessageBox.Show(position.Latitude.ToString() + " " + position.Longitude.ToString());
+            }
+            //if (position.LongitudeValid)
+                //Invoke(cu, txtgpslong, position.Longitude.ToString());
+            //tCoordenate.Text =position.Latitude.ToString()+"  "+position.Longitude.ToString();
+            /*if (position.HeadingValid)
+                Invoke(cu, txtgpsheading, position.Heading.ToString());
+            if (position.SatellitesInViewCountValid)
+                Invoke(cu, txtgpssatellite, position.SatellitesInViewCount.ToString());*/
+
+
+        }
+        private delegate void ControlUpdater(Control c, string s);
+        private void UpdateControl(Control con, string strdata)
+        {
+            con.Text = strdata;
+        } 
+
+
+
+
 
         private void panelSave_Click(object sender, EventArgs e)
         {
@@ -130,14 +168,5 @@ namespace SmartDeviceProject1.interfaz
             validaNumero(e);
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tAdrres_KeyDown(object sender, KeyEventArgs e)
-        {
-            String [] point = this.Gm.loadLatitudLatitud(this.Gm.geoURL(this.tAdrres.Text.Trim()));            
-        }
     }
 }

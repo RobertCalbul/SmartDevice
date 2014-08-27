@@ -30,3 +30,4 @@ C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartD
 C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\bin\Debug\Microsoft.WindowsMobile.PocketOutlook.xml
 C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\bin\Debug\Microsoft.WindowsMobile.xml
 C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\bin\Debug\LightMeter.XML
+C:\Users\Robert\Documents\REPOSITORIO GIT\SmartDevice\SmartDeviceProject1\SmartDeviceProject1\bin\Debug\Microsoft.WindowsMobile.Samples.Location.dll

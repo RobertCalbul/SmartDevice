@@ -51,6 +51,7 @@
             this.tCoordenate = new System.Windows.Forms.TextBox();
             this.back = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel7.SuspendLayout();
             this.panelNodata.SuspendLayout();
             this.pSave.SuspendLayout();
@@ -268,11 +269,19 @@
             this.pictureBox1.Size = new System.Drawing.Size(84, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             // 
+            // panel5
+            // 
+            this.panel5.Location = new System.Drawing.Point(188, 4);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(49, 44);
+            this.panel5.Click += new System.EventHandler(this.panel5_Click);
+            // 
             // TakeData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.back);
             this.Controls.Add(this.panel10);
@@ -325,6 +334,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel back;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel5;
 
     }
 }

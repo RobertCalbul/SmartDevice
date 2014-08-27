@@ -15,13 +15,13 @@
         "Entry"
         {
         "MsmKey" = "8:_068BA5182BAECFD2792DCF1BEAC21B03"
-        "OwnerKey" = "8:_585E374957D1427F83619F44D9B7F8EB"
+        "OwnerKey" = "8:_8A425D79F3714276B6C81D40FA06C06D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_2BB1181662DAE206C376087B9283165E"
-        "OwnerKey" = "8:_585E374957D1427F83619F44D9B7F8EB"
+        "OwnerKey" = "8:_8A425D79F3714276B6C81D40FA06C06D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -39,7 +39,7 @@
         "Entry"
         {
         "MsmKey" = "8:_2C743961A1ACD5F75984CA5201011151"
-        "OwnerKey" = "8:_585E374957D1427F83619F44D9B7F8EB"
+        "OwnerKey" = "8:_8A425D79F3714276B6C81D40FA06C06D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -99,31 +99,37 @@
         "Entry"
         {
         "MsmKey" = "8:_2CC4C7379CD065C12CDF434BD1822A89"
-        "OwnerKey" = "8:_585E374957D1427F83619F44D9B7F8EB"
+        "OwnerKey" = "8:_8A425D79F3714276B6C81D40FA06C06D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_4EF7B7595EE038DD6CF5398981729304"
-        "OwnerKey" = "8:_585E374957D1427F83619F44D9B7F8EB"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_585E374957D1427F83619F44D9B7F8EB"
-        "OwnerKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_8A425D79F3714276B6C81D40FA06C06D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_6E6BCF568E015176886E90081F729A2C"
-        "OwnerKey" = "8:_585E374957D1427F83619F44D9B7F8EB"
+        "OwnerKey" = "8:_8A425D79F3714276B6C81D40FA06C06D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7E83354E9A4893A295A21CB59B4535E0"
+        "OwnerKey" = "8:_8A425D79F3714276B6C81D40FA06C06D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_8A425D79F3714276B6C81D40FA06C06D"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_9801D9F89CC7092B0CF98095670C478B"
-        "OwnerKey" = "8:_585E374957D1427F83619F44D9B7F8EB"
+        "OwnerKey" = "8:_8A425D79F3714276B6C81D40FA06C06D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -147,31 +153,31 @@
         "Entry"
         {
         "MsmKey" = "8:_B8A07176CFE797B48F28C7A4EFBEF728"
-        "OwnerKey" = "8:_585E374957D1427F83619F44D9B7F8EB"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_B8A07176CFE797B48F28C7A4EFBEF728"
         "OwnerKey" = "8:_BC47F9753835D40E17A80DC9BBC92762"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
+        "MsmKey" = "8:_B8A07176CFE797B48F28C7A4EFBEF728"
+        "OwnerKey" = "8:_8A425D79F3714276B6C81D40FA06C06D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_BC47F9753835D40E17A80DC9BBC92762"
-        "OwnerKey" = "8:_585E374957D1427F83619F44D9B7F8EB"
+        "OwnerKey" = "8:_8A425D79F3714276B6C81D40FA06C06D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_C13FE10D87A2224821B33AE3AEB0A5A0"
-        "OwnerKey" = "8:_585E374957D1427F83619F44D9B7F8EB"
+        "OwnerKey" = "8:_8A425D79F3714276B6C81D40FA06C06D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_E0A8968A81EA9FFC901AC541F04E043A"
-        "OwnerKey" = "8:_585E374957D1427F83619F44D9B7F8EB"
+        "OwnerKey" = "8:_8A425D79F3714276B6C81D40FA06C06D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -188,8 +194,14 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_F1AE215823CE73114D85635037AE5400"
+        "OwnerKey" = "8:_8A425D79F3714276B6C81D40FA06C06D"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_FD0AA0A3C2EFCE5E7528E7F8A115D885"
-        "OwnerKey" = "8:_585E374957D1427F83619F44D9B7F8EB"
+        "OwnerKey" = "8:_8A425D79F3714276B6C81D40FA06C06D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -207,13 +219,13 @@
         "Entry"
         {
         "MsmKey" = "8:_FE2957283E40700288121C1B630FE3E7"
-        "OwnerKey" = "8:_585E374957D1427F83619F44D9B7F8EB"
+        "OwnerKey" = "8:_4EF7B7595EE038DD6CF5398981729304"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_FE2957283E40700288121C1B630FE3E7"
-        "OwnerKey" = "8:_4EF7B7595EE038DD6CF5398981729304"
+        "OwnerKey" = "8:_8A425D79F3714276B6C81D40FA06C06D"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -422,6 +434,34 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{E4F2F62A-3940-4BF5-A031-F7FA98CAAFFA}:_7E83354E9A4893A295A21CB59B4535E0"
+            {
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3"
+                "ScatterAssemblies"
+                {
+                    "_7E83354E9A4893A295A21CB59B4535E0"
+                    {
+                    "Name" = "8:System.Data.SqlServerCe.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:System.Data.SqlServerCe.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_95CB86883A3A493D87755459D201C44B"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{E4F2F62A-3940-4BF5-A031-F7FA98CAAFFA}:_9801D9F89CC7092B0CF98095670C478B"
             {
             "AssemblyIsInGAC" = "11:FALSE"
@@ -562,6 +602,34 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{E4F2F62A-3940-4BF5-A031-F7FA98CAAFFA}:_F1AE215823CE73114D85635037AE5400"
+            {
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:Microsoft.WindowsMobile.Samples.Location, Version=1.0.3760.23375, Culture=neutral"
+                "ScatterAssemblies"
+                {
+                    "_F1AE215823CE73114D85635037AE5400"
+                    {
+                    "Name" = "8:Microsoft.WindowsMobile.Samples.Location.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:Microsoft.WindowsMobile.Samples.Location.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_95CB86883A3A493D87755459D201C44B"
+            "Condition" = "8:"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "Register" = "3:0"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{E4F2F62A-3940-4BF5-A031-F7FA98CAAFFA}:_FD0AA0A3C2EFCE5E7528E7F8A115D885"
             {
             "AssemblyIsInGAC" = "11:FALSE"
@@ -672,7 +740,7 @@
         }
         "ProjectOutput"
         {
-            "{605BE39E-5046-48BD-AEC0-63C3A46626D5}:_585E374957D1427F83619F44D9B7F8EB"
+            "{605BE39E-5046-48BD-AEC0-63C3A46626D5}:_8A425D79F3714276B6C81D40FA06C06D"
             {
             "SourcePath" = "8:..\\SmartDeviceProject1\\obj\\Debug\\LightMeter.exe"
             "TargetName" = "8:"
@@ -734,13 +802,13 @@
         }
         "Shortcut"
         {
-            "{971D45E9-E38C-49AC-B36E-4C5BEA533350}:_C325148BCC9B4D6A8F9EBBC0F3BA3F34"
+            "{971D45E9-E38C-49AC-B36E-4C5BEA533350}:_9B5F31A617404ED4B637E6033DE4BE10"
             {
-            "Name" = "8:LIGHT METER"
+            "Name" = "8:LightMeter 2.0"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
-            "Target" = "8:_585E374957D1427F83619F44D9B7F8EB"
+            "Target" = "8:_8A425D79F3714276B6C81D40FA06C06D"
             "Folder" = "8:_0465CCBC2346467B90F7479A8595DBD8"
             "WorkingFolder" = "8:_95CB86883A3A493D87755459D201C44B"
             }
