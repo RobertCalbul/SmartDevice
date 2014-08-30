@@ -7,10 +7,10 @@ using System.Resources;
 // conjunto de atributos. Cambie estos atributos para modificar la información
 // asociada con un ensamblado.
 [assembly: AssemblyTitle("LigthMeter")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Capturador de datos")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("SmartDeviceProject1")]
+[assembly: AssemblyCompany("CODINER")]
+[assembly: AssemblyProduct("LightMeter")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

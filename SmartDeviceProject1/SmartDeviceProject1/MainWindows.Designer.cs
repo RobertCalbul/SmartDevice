@@ -31,9 +31,25 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
+            this.menuItem1 = new System.Windows.Forms.MenuItem();
+            this.menuItem3 = new System.Windows.Forms.MenuItem();
             this.PanelPrincipal = new System.Windows.Forms.Panel();
             this.Timer = new System.Windows.Forms.Timer();
             this.SuspendLayout();
+            // 
+            // mainMenu1
+            // 
+            this.mainMenu1.MenuItems.Add(this.menuItem1);
+            // 
+            // menuItem1
+            // 
+            this.menuItem1.MenuItems.Add(this.menuItem3);
+            this.menuItem1.Text = "Options";
+            // 
+            // menuItem3
+            // 
+            this.menuItem3.Text = "Quit";
+            this.menuItem3.Click += new System.EventHandler(this.menuItem3_Click);
             // 
             // PanelPrincipal
             // 
@@ -73,6 +89,8 @@
 
         public System.Windows.Forms.Panel PanelPrincipal;
         private System.Windows.Forms.Timer Timer;
+        private System.Windows.Forms.MenuItem menuItem1;
+        private System.Windows.Forms.MenuItem menuItem3;
 
 
     }

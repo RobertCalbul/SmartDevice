@@ -15,9 +15,14 @@ namespace SmartDeviceProject1.interfaz
     {
         Form1 main;
         private Gps objGps;
+        List<String> cod_service_auto = new List<string>();
+        
+       
         public TakeData(Form1 main)
         {
             InitializeComponent();
+            
+
             this.main = main;
             int anchoPanel =Convert.ToInt32(this.Width*0.5);
             this.panel1.Width = anchoPanel;
@@ -29,8 +34,23 @@ namespace SmartDeviceProject1.interfaz
             this.tDateHour.Text = DateTime.Now.ToString("MM/dd/yy hh:mm");
             //this.tDateHour.ForeColor = Color.FromArgb(250, 128, 113);
 
-            MessageBox.Show("ZZ");
+            cod_service_auto.Add("-----");
+            cod_service_auto.Add("0011");
+            cod_service_auto.Add("0010");
+            cod_service_auto.Add("0021");
+            cod_service_auto.Add("0022");
+            cod_service_auto.Add("0032");
+            cod_service_auto.Add("0042");
+            cod_service_auto.Add("0067");
+            cod_service_auto.Add("0072");
+            cod_service_auto.Add("00323");
+            cod_service_auto.Add("0024");
+            cod_service_auto.Add("0046");
+            cod_service_auto.Add("0068");
+
+           
             objGps = this.main.objGps;//new Gps();
+            objGps.Close();
             if (!objGps.Opened)
             {
                 // objgps.DeviceStateChanged += new DeviceStateChangedEventHandler(gps_DeviceStateChange);
@@ -45,9 +65,8 @@ namespace SmartDeviceProject1.interfaz
             ControlUpdater cu = UpdateControl;
             if (position.LatitudeValid && position.LongitudeValid)
             {
-                //position.Latitude.ToString() + " " + position.Longitude.ToString()
-                MessageBox.Show(position.Latitude.ToString() + " " + position.Longitude.ToString());
-                Invoke(cu, tCoordenate, "Hola " + "que " + "hace");
+                String coordenadas = position.Latitude.ToString() + " " + position.Longitude.ToString();
+                Invoke(cu, tCoordenate, coordenadas);
             }
             //if (position.LongitudeValid)
             //Invoke(cu, txtgpslong, position.Longitude.ToString());
@@ -121,8 +140,53 @@ namespace SmartDeviceProject1.interfaz
 
         private void panel5_Click(object sender, EventArgs e)
         {
-            this.main.objGps.Close();
-            this.main.Close();
+
+        }
+
+        private void tCodServ_TextChanged(object sender, EventArgs e)
+        {
+            String typed = this.tCodServ.Text.Trim();
+            List<String> autoList = new List<String>();
+            autoList.Clear();
+            autoList.Add("-----");
+            foreach (String item in this.cod_service_auto)
+            {
+                if (!String.IsNullOrEmpty(this.tCodServ.Text.Trim())) {
+                    if (item.StartsWith(typed)) {
+                        
+                        autoList.Add(item);
+                    }
+                }
+            }
+
+            if (autoList.Count > 0) {
+                this.listBox1.DataSource = autoList;
+                this.listBox1.Visible = true;
+            }
+            else if (this.tCodServ.Text.Equals(""))
+            {
+                this.listBox1.Visible = false;
+                this.listBox1.DataSource = null;
+            }
+            else {
+                this.listBox1.Visible = false;
+                this.listBox1.DataSource = null;
+            }
+        }
+
+        private void listBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (this.listBox1.DataSource != null)
+            {
+                this.listBox1.Visible = false;
+                this.tCodServ.TextChanged -= new EventHandler(this.tCodServ_TextChanged);
+
+                if (this.listBox1.SelectedIndex > 0)
+                {
+                    this.tCodServ.Text = this.listBox1.SelectedItem.ToString();
+                }
+                this.tCodServ.TextChanged += new EventHandler(this.tCodServ_TextChanged);
+            }
         }
     }
 }

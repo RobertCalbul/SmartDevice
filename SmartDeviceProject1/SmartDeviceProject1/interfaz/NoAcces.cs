@@ -26,6 +26,7 @@ namespace SmartDeviceProject1.interfaz
 
 
             objGps = this.main.objGps;// new Gps();
+            objGps.Close();
             if (!objGps.Opened)
             {
                 // objgps.DeviceStateChanged += new DeviceStateChangedEventHandler(gps_DeviceStateChange);
@@ -40,8 +41,8 @@ namespace SmartDeviceProject1.interfaz
             ControlUpdater cu = UpdateControl;
             if (position.LatitudeValid && position.LongitudeValid)
             {
-                Invoke(cu, tCoordenate, position.Latitude.ToString() + " " + position.Longitude.ToString());
-                MessageBox.Show(position.Latitude.ToString() + " " + position.Longitude.ToString());
+                String coordenadas = position.Latitude.ToString() + " " + position.Longitude.ToString();
+                Invoke(cu, tCoordenate, coordenadas);
             }
             //if (position.LongitudeValid)
                 //Invoke(cu, txtgpslong, position.Longitude.ToString());
@@ -167,6 +168,10 @@ namespace SmartDeviceProject1.interfaz
         {
             validaNumero(e);
         }
+
+
+
+
 
     }
 }

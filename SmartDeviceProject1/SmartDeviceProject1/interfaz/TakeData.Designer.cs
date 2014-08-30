@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TakeData));
             this.panel7 = new System.Windows.Forms.Panel();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.tCodServ = new System.Windows.Forms.TextBox();
             this.panelNodata = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@
             this.tCoordenate = new System.Windows.Forms.TextBox();
             this.back = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.panel7.SuspendLayout();
             this.panelNodata.SuspendLayout();
             this.pSave.SuspendLayout();
@@ -72,6 +72,15 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(120, 20);
             // 
+            // listBox1
+            // 
+            this.listBox1.Location = new System.Drawing.Point(125, 90);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(100, 100);
+            this.listBox1.TabIndex = 1;
+            this.listBox1.Visible = false;
+            this.listBox1.SelectedValueChanged += new System.EventHandler(this.listBox1_SelectedValueChanged);
+            // 
             // tCodServ
             // 
             this.tCodServ.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -82,6 +91,7 @@
             this.tCodServ.Size = new System.Drawing.Size(120, 21);
             this.tCodServ.TabIndex = 0;
             this.tCodServ.Text = "00023";
+            this.tCodServ.TextChanged += new System.EventHandler(this.tCodServ_TextChanged);
             this.tCodServ.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tCodServ_KeyPress);
             // 
             // panelNodata
@@ -269,23 +279,15 @@
             this.pictureBox1.Size = new System.Drawing.Size(84, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             // 
-            // panel5
-            // 
-            this.panel5.Location = new System.Drawing.Point(188, 4);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(49, 44);
-            this.panel5.Click += new System.EventHandler(this.panel5_Click);
-            // 
             // TakeData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.back);
             this.Controls.Add(this.panel10);
-            this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panelNodata);
             this.Controls.Add(this.pSave);
@@ -294,6 +296,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel9);
             this.Name = "TakeData";
             this.Size = new System.Drawing.Size(240, 280);
             this.panel7.ResumeLayout(false);
@@ -334,7 +337,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel back;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.ListBox listBox1;
 
     }
 }

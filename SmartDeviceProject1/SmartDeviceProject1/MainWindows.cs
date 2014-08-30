@@ -29,7 +29,6 @@ namespace SmartDeviceProject1
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            
             if ((e.KeyCode == System.Windows.Forms.Keys.Up))
             {
                 // Up
@@ -44,6 +43,8 @@ namespace SmartDeviceProject1
             }
             if ((e.KeyCode == System.Windows.Forms.Keys.Right))
             {
+                this.PanelPrincipal.Controls.Clear();
+                this.PanelPrincipal.Controls.Add(new TakeData(this));
                 // Right
             }
             if ((e.KeyCode == System.Windows.Forms.Keys.Enter))
@@ -51,10 +52,6 @@ namespace SmartDeviceProject1
                 // Enter
             }
 
-        }
-        private void menuItem1_Click(object sender, EventArgs e)
-        {
-            if (PanelPrincipal.Controls.Equals("Welcome")) MessageBox.Show("HOLA");
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -66,5 +63,13 @@ namespace SmartDeviceProject1
                 this.PanelPrincipal.Controls.Add(new TakeData(this));
             }
         }
+
+
+        private void menuItem3_Click(object sender, EventArgs e)
+        {
+            this.objGps.Close();
+            this.Close();
+        }
+
     }
 }
