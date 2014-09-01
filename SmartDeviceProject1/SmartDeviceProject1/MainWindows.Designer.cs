@@ -35,6 +35,7 @@
             this.menuItem3 = new System.Windows.Forms.MenuItem();
             this.PanelPrincipal = new System.Windows.Forms.Panel();
             this.Timer = new System.Windows.Forms.Timer();
+            this.menuItemRutas = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -44,6 +45,7 @@
             // menuItem1
             // 
             this.menuItem1.MenuItems.Add(this.menuItem3);
+            this.menuItem1.MenuItems.Add(this.menuItemRutas);
             this.menuItem1.Text = "Options";
             // 
             // menuItem3
@@ -63,6 +65,11 @@
             // Timer
             // 
             this.Timer.Tick += new System.EventHandler(this.Timer_Tick);
+            // 
+            // menuItemRutas
+            // 
+            this.menuItemRutas.Text = "Cargar Rutas";
+            this.menuItemRutas.Click += new System.EventHandler(this.menuItemRutas_Click);
             // 
             // Form1
             // 
@@ -91,6 +98,7 @@
         private System.Windows.Forms.Timer Timer;
         private System.Windows.Forms.MenuItem menuItem1;
         private System.Windows.Forms.MenuItem menuItem3;
+        private System.Windows.Forms.MenuItem menuItemRutas;
 
 
     }

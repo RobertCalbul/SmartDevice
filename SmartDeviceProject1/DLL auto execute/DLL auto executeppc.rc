@@ -1,0 +1,170 @@
+//Script de recursos generado en Microsoft Visual C++.
+//
+#include "resourceppc.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generado a partir del recurso TEXTINCLUDE 2.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#include "resdefce.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESN)
+LANGUAGE 10, 3
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icono
+//
+
+// Icono con el valor de id. menor colocado en primer lugar para garantizar que el icono de la aplicación
+// es el mismo en todos los sistemas.
+
+IDI_DLLAUTOEXECUTE       ICON         "DLL auto execute.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menú
+//
+
+IDR_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "Ayuda"
+    BEGIN
+        MENUITEM "Acerca de",		IDM_HELP_ABOUT
+    END
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Acelerador
+//
+
+IDC_DLLAUTOEXECUTE ACCELERATORS
+BEGIN
+    "A",            IDM_HELP_ABOUT,         VIRTKEY, CONTROL, NOINVERT
+    "Q",            IDM_OK,          VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cuadro de diálogo
+//
+
+IDD_ABOUTBOX DIALOG 0, 0, 156, 129
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+EXSTYLE WS_EX_CAPTIONOKBTN
+CAPTION "Acerca de DLL auto execute"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON         IDI_DLLAUTOEXECUTE,IDC_STATIC_1,12,12,21,20,SS_REALSIZEIMAGE
+    LTEXT        "DLL auto execute, versión 1.0",IDC_STATIC_2,12,36,70,8,SS_NOPREFIX
+    LTEXT        "(C) 2014",IDC_STATIC_3,12,48,66,8
+END
+
+IDD_ABOUTBOX_WIDE DIALOG 0, 0, 210, 129
+STYLE WS_POPUP | WS_CAPTION 
+EXSTYLE WS_EX_CAPTIONOKBTN
+CAPTION "Acerca de DLL auto execute"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON         IDI_DLLAUTOEXECUTE,IDC_STATIC_1,12,12,21,20,SS_REALSIZEIMAGE
+    LTEXT        "DLL auto execute, versión 1.0",IDC_STATIC_2,48,12,66,8,SS_NOPREFIX
+    LTEXT        "(C) 2014",IDC_STATIC_3,48,24,66,8
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 149
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_ABOUTBOX_WIDE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+1 TEXTINCLUDE  
+BEGIN
+    "resourceppc.h\0"
+END
+
+2 TEXTINCLUDE  
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#include ""resdefce.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE  
+BEGIN
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESN)\r\n"
+    "LANGUAGE 10, 3\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""DLLautoexecuteppc.rc2""  // Recursos editados que no son de Microsoft Visual C++\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Tabla de cadenas
+//
+STRINGTABLE  
+BEGIN
+   IDC_DLLAUTOEXECUTE   "DLLAUTOEXECUTE"
+   IDS_APP_TITLE    "DLL auto execute"
+   IDS_OK	"Aceptar"
+   IDS_HELP	"AYUDA"
+END
+
+#endif
+/////////////////////////////////////////////////////////////////////////////
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generado a partir del recurso TEXTINCLUDE 3.
+//
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ESN)
+LANGUAGE 10, 3
+#pragma code_page(1252)
+#include "DLLautoexecuteppc.rc2"  // Recursos editados que no son de Microsoft Visual C++
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // No APSTUDIO_INVOKED

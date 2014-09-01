@@ -13,17 +13,15 @@ namespace SmartDeviceProject1.interfaz
 {
     public partial class TakeData : UserControl
     {
-        Form1 main;
+        #region variable globales
+        private Form1 main;
         private Gps objGps;
-        List<String> cod_service_auto = new List<string>();
-        
-       
+        #endregion 
         public TakeData(Form1 main)
         {
             InitializeComponent();
-            
-
             this.main = main;
+            #region configuraciones visuales
             int anchoPanel =Convert.ToInt32(this.Width*0.5);
             this.panel1.Width = anchoPanel;
             this.panel2.Width = anchoPanel;
@@ -31,24 +29,21 @@ namespace SmartDeviceProject1.interfaz
             this.panel4.Width = anchoPanel;
             this.pSave.Width = anchoPanel;
             this.panelNodata.Width = anchoPanel;
-            this.tDateHour.Text = DateTime.Now.ToString("MM/dd/yy hh:mm");
-            //this.tDateHour.ForeColor = Color.FromArgb(250, 128, 113);
+            #endregion
 
-            cod_service_auto.Add("-----");
-            cod_service_auto.Add("0011");
-            cod_service_auto.Add("0010");
-            cod_service_auto.Add("0021");
-            cod_service_auto.Add("0022");
-            cod_service_auto.Add("0032");
-            cod_service_auto.Add("0042");
-            cod_service_auto.Add("0067");
-            cod_service_auto.Add("0072");
-            cod_service_auto.Add("00323");
-            cod_service_auto.Add("0024");
-            cod_service_auto.Add("0046");
-            cod_service_auto.Add("0068");
+            this.tDateHour.Text = this.main.dateFormat(DateTime.Now.ToString("MMddyy hh:mm"));
+            #region comprueba que existan los codigos de servicio o no
+            if (this.main.cod_service_auto.Count < 1) {
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult dr =  MessageBox.Show("No se cargo las rutas\n¿Desea cargarlas ahora?.","",buttons,MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+                if (dr == DialogResult.Yes)
+                {
+                    this.main.cargarRutas();
+                }
+            }
+            #endregion
 
-           
+            #region configura y habilita gps
             objGps = this.main.objGps;//new Gps();
             objGps.Close();
             if (!objGps.Opened)
@@ -57,7 +52,9 @@ namespace SmartDeviceProject1.interfaz
                 objGps.LocationChanged += new LocationChangedEventHandler(gps_LocationChanged);
                 objGps.Open();
             }
+            #endregion
         }
+        #region seteo y actualizacion de coordenadas por gps
         private void gps_LocationChanged(object sender, LocationChangedEventArgs args)
         {
             //this.tCoordenate.Text = "";
@@ -75,31 +72,20 @@ namespace SmartDeviceProject1.interfaz
                 Invoke(cu, txtgpsheading, position.Heading.ToString());
             if (position.SatellitesInViewCountValid)
                 Invoke(cu, txtgpssatellite, position.SatellitesInViewCount.ToString());*/
-
-
         }
-
         private delegate void ControlUpdater(Control c, string s);
         private void UpdateControl(Control con, string strdata)
         {
             con.Text = strdata;
-        } 
+        }
+        #endregion 
+        //pasa a la siguiente interfaz
         private void panel6_Click_1(object sender, EventArgs e)
         {
             this.main.PanelPrincipal.Controls.Clear();
             this.main.PanelPrincipal.Controls.Add(new NoAcces(this.main));
         }
-
-        private Boolean validacionFormulario(){
-            Boolean flag = false;
-
-            flag = !this.tCodServ.Text.Equals("") ? true : false;
-            flag &= !this.tDateHour.Text.Equals("") ? true : false;
-            flag &= !this.tCoordenate.Text.Equals("") ? true : false;
-            flag &= !this.tReadActual.Text.Equals("") ? true : false;
-            
-            return flag;
-        }
+       
 
         private void pSave_Click(object sender, EventArgs e)
         {   
@@ -114,42 +100,24 @@ namespace SmartDeviceProject1.interfaz
                 {
                     new Dialog(this.main).ShowDialog();
                 }
+                else
+                {
+                    MessageBox.Show("Ha ocurrido un error al guardar, por favor intentelo nuevamente.", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+                }
             }
             else {
-                MessageBox.Show("Verifique todos los campos.");
+                MessageBox.Show("Verifique todos los campo.", "", MessageBoxButtons.OK, MessageBoxIcon.None, MessageBoxDefaultButton.Button1);
             }
         }
 
-        private void tCodServ_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            validaNumero(e);
-        }
-
-        private void tReadActual_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            validaNumero(e);
-        }
-
-        private void validaNumero(KeyPressEventArgs e){
-
-            if (Char.IsDigit(e.KeyChar)) e.Handled = false;
-            else if (Char.IsControl(e.KeyChar)) e.Handled = false;
-            else if (Char.IsSeparator(e.KeyChar)) e.Handled = false;
-            else e.Handled = true;
-        }
-
-        private void panel5_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        #region auto-complete codigo servicios
         private void tCodServ_TextChanged(object sender, EventArgs e)
         {
             String typed = this.tCodServ.Text.Trim();
             List<String> autoList = new List<String>();
             autoList.Clear();
             autoList.Add("-----");
-            foreach (String item in this.cod_service_auto)
+            foreach (String item in this.main.cod_service_auto)
             {
                 if (!String.IsNullOrEmpty(this.tCodServ.Text.Trim())) {
                     if (item.StartsWith(typed)) {
@@ -188,5 +156,37 @@ namespace SmartDeviceProject1.interfaz
                 this.tCodServ.TextChanged += new EventHandler(this.tCodServ_TextChanged);
             }
         }
+        #endregion
+
+        #region algunas validaciones
+        private Boolean validacionFormulario()
+        {
+            Boolean flag = false;
+            flag = !this.tCodServ.Text.Equals("") ? true : false;
+            flag &= !this.tDateHour.Text.Equals("") ? true : false;
+            flag &= !this.tCoordenate.Text.Equals("") ? true : false;
+            flag &= !this.tReadActual.Text.Equals("") ? true : false;
+
+            return flag;
+        }
+        private void tCodServ_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaNumero(e);
+        }
+
+        private void tReadActual_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validaNumero(e);
+        }
+
+        private void validaNumero(KeyPressEventArgs e)
+        {
+
+            if (Char.IsDigit(e.KeyChar)) e.Handled = false;
+            else if (Char.IsControl(e.KeyChar)) e.Handled = false;
+            else if (Char.IsSeparator(e.KeyChar)) e.Handled = false;
+            else e.Handled = true;
+        }
+        #endregion 
     }
 }

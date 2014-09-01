@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using SmartDeviceProject1.interfaz;
 using System.Threading;
 using Microsoft.WindowsMobile.Samples.Location;
+using LightMeter.Clases;
 
 namespace SmartDeviceProject1
 {
@@ -16,6 +17,7 @@ namespace SmartDeviceProject1
     {
         private Welcome _welcome;
         public Gps objGps;
+        public List<String> cod_service_auto = new List<string>();
         public Form1()
         {
             InitializeComponent();
@@ -25,6 +27,7 @@ namespace SmartDeviceProject1
             this.Timer.Enabled = true;
             this.Timer.Interval = 1000;
             objGps = new Gps();
+
             
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -69,6 +72,40 @@ namespace SmartDeviceProject1
         {
             this.objGps.Close();
             this.Close();
+        }
+
+        public String dateFormat(String date) {
+            String[] data = date.Split(' ');
+            return data[0].Substring(0, 2) + "/" + data[0].Substring(2, 2) + "/" + data[0].Substring(4, 2) +" "+data[1];
+        }
+
+        private void menuItemRutas_Click(object sender, EventArgs e)
+        {
+            cargarRutas();
+        }
+
+        public void cargarRutas()
+        {
+            String path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Archivos txt(*.txt) | *.txt";
+            ofd.InitialDirectory = "\\My Documents";
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                List<String> listaRuta = new Archivo().readRuta(ofd.FileName);
+                if (listaRuta != null)
+                {
+                    this.cod_service_auto = listaRuta;
+                }
+                else {
+                    MessageBox.Show("No se puede cargar este archivo.","",MessageBoxButtons.OK,MessageBoxIcon.None,MessageBoxDefaultButton.Button1);
+                } 
+            }
+            else
+            {
+
+            }
         }
 
     }

@@ -12,7 +12,7 @@ using System.Resources;
 [assembly: AssemblyCompany("CODINER")]
 [assembly: AssemblyProduct("LightMeter")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2014")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("LightMeter")]
 [assembly: AssemblyCulture("")]
 
 // Si establece ComVisible como false hace que los tipos de este ensamblado no sean visibles
@@ -35,4 +35,4 @@ using System.Resources;
 // El atributo siguiente es para suprimir la advertencia sobre FxCop "CA2232 : Microsoft.Usage : Agregue STAThreadAttribute al ensamblado"
 // como aplicación para dispositivos no admite el subproceso STA.
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2232:MarkWindowsFormsEntryPointsWithStaThread")]
-[assembly: NeutralResourcesLanguageAttribute("es-HN")]
+[assembly: NeutralResourcesLanguageAttribute("es-CL")]

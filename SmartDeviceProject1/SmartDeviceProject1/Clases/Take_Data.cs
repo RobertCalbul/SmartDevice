@@ -39,12 +39,10 @@ namespace LightMeter.Clases
 
         public int create_File_No_Data()
         {
-           /* try
+            try
             {
                 String path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-                
-*/
-            StringBuilder sb = new StringBuilder();
+                StringBuilder sb = new StringBuilder();
                 sb.AppendLine("");
                 sb.AppendLine("*------------------------*");
                 sb.AppendLine("Codigo Servicio: " + this.code_service);
@@ -55,17 +53,18 @@ namespace LightMeter.Clases
                 sb.AppendLine("Nombre foto: " + this.file_name);
                 sb.AppendLine("*------------------------*");
 
-                return Convert.ToInt32(new Archivo().write(sb, "outFileNoData.txt"));
-                /*using (StreamWriter out_file = new StreamWriter(path + @"\outFileNoData.txt", true))
+
+                using (StreamWriter out_file = new StreamWriter(path + @"\Problema.txt", true))
                 {
                     out_file.Write(sb.ToString());
-                }*/
-           /*     return 1;
+                }
+                return 1;
             }
-            catch (Exception e) {
+            catch (Exception e)
+            {
                 Console.WriteLine("Error Take_Data.create_File_No_Data() " + e.Message);
-                return 0;                
-            }*/
+                return 0;
+            }
         }
 
         public int create_file_take_data() {
@@ -81,7 +80,7 @@ namespace LightMeter.Clases
                 sb.AppendLine("Fecha-Hora: " + this.hour_date);
                 sb.AppendLine("Coordenadas: " + this.coordenate);
                 sb.AppendLine("*------------------------*");
-                using (StreamWriter out_file = new StreamWriter(path + @"\outFileTakeData.txt", true))
+                using (StreamWriter out_file = new StreamWriter(path + @"\Resultado.txt", true))
                 {
                     out_file.Write(sb.ToString());
                 }

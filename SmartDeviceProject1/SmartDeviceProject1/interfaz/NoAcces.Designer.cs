@@ -42,29 +42,30 @@
             this.panelLoadPhoto = new System.Windows.Forms.Panel();
             this.lblUploadPhoto = new System.Windows.Forms.Label();
             this.pTakePhoto = new System.Windows.Forms.PictureBox();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.panelDireccion = new System.Windows.Forms.Panel();
             this.tAdrres = new System.Windows.Forms.TextBox();
-            this.panel8 = new System.Windows.Forms.Panel();
+            this.panelCodService = new System.Windows.Forms.Panel();
             this.tCodeService = new System.Windows.Forms.TextBox();
-            this.panel9 = new System.Windows.Forms.Panel();
+            this.panelDateHour = new System.Windows.Forms.Panel();
             this.tDateHour = new System.Windows.Forms.TextBox();
-            this.panel10 = new System.Windows.Forms.Panel();
+            this.panelCoordenada = new System.Windows.Forms.Panel();
             this.tCoordenate = new System.Windows.Forms.TextBox();
-            this.panel11 = new System.Windows.Forms.Panel();
+            this.panelMotive = new System.Windows.Forms.Panel();
             this.cMotivo = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.back = new System.Windows.Forms.Panel();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.panelSave.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panelLoadPhoto.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel11.SuspendLayout();
+            this.panelDireccion.SuspendLayout();
+            this.panelCodService.SuspendLayout();
+            this.panelDateHour.SuspendLayout();
+            this.panelCoordenada.SuspendLayout();
+            this.panelMotive.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSave
@@ -83,7 +84,7 @@
             this.label5.Location = new System.Drawing.Point(0, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(120, 20);
-            this.label5.Text = "GUARDAR";
+            this.label5.Text = "GUARDAR .";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // panel2
@@ -101,7 +102,7 @@
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 20);
-            this.label4.Text = "MOTIVO ";
+            this.label4.Text = "MOTIVO .";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // panel3
@@ -119,7 +120,7 @@
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 20);
-            this.label3.Text = "COORDENADAS";
+            this.label3.Text = "COORDENADAS .";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // panel4
@@ -137,7 +138,7 @@
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(120, 20);
-            this.label2.Text = "FECHA Y HORA";
+            this.label2.Text = "FECHA Y HORA .";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // panel5
@@ -155,7 +156,7 @@
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 20);
-            this.label1.Text = "CODIGO SERVICIO";
+            this.label1.Text = "CODIGO SERVICIO .";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // panelLoadPhoto
@@ -174,7 +175,7 @@
             this.lblUploadPhoto.Location = new System.Drawing.Point(3, 36);
             this.lblUploadPhoto.Name = "lblUploadPhoto";
             this.lblUploadPhoto.Size = new System.Drawing.Size(120, 20);
-            this.lblUploadPhoto.Text = "SUBIR FOTO";
+            this.lblUploadPhoto.Text = "SUBIR FOTO .";
             this.lblUploadPhoto.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // pTakePhoto
@@ -185,13 +186,13 @@
             this.pTakePhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pTakePhoto.Visible = false;
             // 
-            // panel7
+            // panelDireccion
             // 
-            this.panel7.BackColor = System.Drawing.Color.Transparent;
-            this.panel7.Controls.Add(this.tAdrres);
-            this.panel7.Location = new System.Drawing.Point(126, 105);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(120, 20);
+            this.panelDireccion.BackColor = System.Drawing.Color.Transparent;
+            this.panelDireccion.Controls.Add(this.tAdrres);
+            this.panelDireccion.Location = new System.Drawing.Point(126, 105);
+            this.panelDireccion.Name = "panelDireccion";
+            this.panelDireccion.Size = new System.Drawing.Size(120, 20);
             // 
             // tAdrres
             // 
@@ -204,13 +205,13 @@
             this.tAdrres.TabIndex = 0;
             this.tAdrres.Text = "San Martin Nº4532";
             // 
-            // panel8
+            // panelCodService
             // 
-            this.panel8.BackColor = System.Drawing.Color.Transparent;
-            this.panel8.Controls.Add(this.tCodeService);
-            this.panel8.Location = new System.Drawing.Point(126, 160);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(120, 20);
+            this.panelCodService.BackColor = System.Drawing.Color.Transparent;
+            this.panelCodService.Controls.Add(this.tCodeService);
+            this.panelCodService.Location = new System.Drawing.Point(126, 160);
+            this.panelCodService.Name = "panelCodService";
+            this.panelCodService.Size = new System.Drawing.Size(120, 20);
             // 
             // tCodeService
             // 
@@ -221,16 +222,16 @@
             this.tCodeService.Name = "tCodeService";
             this.tCodeService.Size = new System.Drawing.Size(120, 21);
             this.tCodeService.TabIndex = 1;
-            this.tCodeService.Text = "00023";
+            this.tCodeService.TextChanged += new System.EventHandler(this.tCodeService_TextChanged);
             this.tCodeService.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tCodeService_KeyPress);
             // 
-            // panel9
+            // panelDateHour
             // 
-            this.panel9.BackColor = System.Drawing.Color.Transparent;
-            this.panel9.Controls.Add(this.tDateHour);
-            this.panel9.Location = new System.Drawing.Point(126, 186);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(120, 20);
+            this.panelDateHour.BackColor = System.Drawing.Color.Transparent;
+            this.panelDateHour.Controls.Add(this.tDateHour);
+            this.panelDateHour.Location = new System.Drawing.Point(126, 186);
+            this.panelDateHour.Name = "panelDateHour";
+            this.panelDateHour.Size = new System.Drawing.Size(120, 20);
             // 
             // tDateHour
             // 
@@ -241,15 +242,14 @@
             this.tDateHour.Name = "tDateHour";
             this.tDateHour.Size = new System.Drawing.Size(120, 21);
             this.tDateHour.TabIndex = 1;
-            this.tDateHour.Text = "30/06/14 15:11";
             // 
-            // panel10
+            // panelCoordenada
             // 
-            this.panel10.BackColor = System.Drawing.Color.Transparent;
-            this.panel10.Controls.Add(this.tCoordenate);
-            this.panel10.Location = new System.Drawing.Point(126, 212);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(120, 20);
+            this.panelCoordenada.BackColor = System.Drawing.Color.Transparent;
+            this.panelCoordenada.Controls.Add(this.tCoordenate);
+            this.panelCoordenada.Location = new System.Drawing.Point(126, 212);
+            this.panelCoordenada.Name = "panelCoordenada";
+            this.panelCoordenada.Size = new System.Drawing.Size(120, 20);
             // 
             // tCoordenate
             // 
@@ -261,15 +261,14 @@
             this.tCoordenate.Name = "tCoordenate";
             this.tCoordenate.Size = new System.Drawing.Size(120, 20);
             this.tCoordenate.TabIndex = 1;
-            this.tCoordenate.Text = "ltd: 39.1º N         lgtd: 11.1ºW";
             // 
-            // panel11
+            // panelMotive
             // 
-            this.panel11.BackColor = System.Drawing.Color.Transparent;
-            this.panel11.Controls.Add(this.cMotivo);
-            this.panel11.Location = new System.Drawing.Point(126, 238);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(115, 20);
+            this.panelMotive.BackColor = System.Drawing.Color.Transparent;
+            this.panelMotive.Controls.Add(this.cMotivo);
+            this.panelMotive.Location = new System.Drawing.Point(126, 238);
+            this.panelMotive.Name = "panelMotive";
+            this.panelMotive.Size = new System.Drawing.Size(115, 20);
             // 
             // cMotivo
             // 
@@ -293,7 +292,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(81, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(81, 16);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(84, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -305,18 +304,28 @@
             this.back.Size = new System.Drawing.Size(40, 40);
             this.back.Click += new System.EventHandler(this.back_Click);
             // 
+            // listBox1
+            // 
+            this.listBox1.Location = new System.Drawing.Point(126, 180);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(100, 100);
+            this.listBox1.TabIndex = 13;
+            this.listBox1.Visible = false;
+            this.listBox1.SelectedValueChanged += new System.EventHandler(this.listBox1_SelectedValueChanged);
+            // 
             // NoAcces
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.back);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel11);
-            this.Controls.Add(this.panel10);
-            this.Controls.Add(this.panel9);
-            this.Controls.Add(this.panel8);
-            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panelDireccion);
+            this.Controls.Add(this.panelCodService);
+            this.Controls.Add(this.panelDateHour);
+            this.Controls.Add(this.panelCoordenada);
+            this.Controls.Add(this.panelMotive);
             this.Controls.Add(this.panelLoadPhoto);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
@@ -331,11 +340,11 @@
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panelLoadPhoto.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
+            this.panelDireccion.ResumeLayout(false);
+            this.panelCodService.ResumeLayout(false);
+            this.panelDateHour.ResumeLayout(false);
+            this.panelCoordenada.ResumeLayout(false);
+            this.panelMotive.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -348,12 +357,12 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panelLoadPhoto;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panelDireccion;
         private System.Windows.Forms.TextBox tAdrres;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panelCodService;
+        private System.Windows.Forms.Panel panelDateHour;
+        private System.Windows.Forms.Panel panelCoordenada;
+        private System.Windows.Forms.Panel panelMotive;
         private System.Windows.Forms.TextBox tCodeService;
         private System.Windows.Forms.TextBox tDateHour;
         private System.Windows.Forms.TextBox tCoordenate;
@@ -367,5 +376,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblUploadPhoto;
         private System.Windows.Forms.Panel back;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

@@ -3,7 +3,7 @@
 "VSVersion" = "3:701"
 "ProjectType" = "8:{AB322303-2255-48EF-A496-5904EB18DA55}"
 "IsWebType" = "8:FALSE"
-"ProjectName" = "8:LighMeter"
+"ProjectName" = "8:LightMeter installer"
 "LanguageId" = "3:3082"
 "CodePage" = "3:1252"
 "SccProjectName" = "8:"
@@ -730,12 +730,12 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:setup LightMeter"
+        "ProductName" = "8:Setup LightMeter"
         "Manufacturer" = "8:CEDEST"
         "OSVersionMin" = "8:4.0"
         "OSVersionMax" = "8:6.99"
-        "NoUninstall" = "11:TRUE"
-        "Compress" = "11:FALSE"
+        "NoUninstall" = "11:FALSE"
+        "Compress" = "11:TRUE"
         "CESetupDLL" = "8:"
         }
         "ProjectOutput"
@@ -804,7 +804,7 @@
         {
             "{971D45E9-E38C-49AC-B36E-4C5BEA533350}:_9B5F31A617404ED4B637E6033DE4BE10"
             {
-            "Name" = "8:LightMeter 2.0"
+            "Name" = "8:LightMeter"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"

@@ -10,19 +10,20 @@ namespace LightMeter.Clases
     class Archivo
     {
         private String path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-        public String read(String fileName) {
+        public List<String> readRuta(String fileName) {
             String line = null;
-            String output = null;
+            List<String> output = null;
             StreamReader sr = null;
             try {
-                sr = new StreamReader(path + @"\" + fileName);
+                output = new List<string>();
+                sr = new StreamReader(fileName);
                 line = sr.ReadLine();
                 while (line != null) {
-                    output += line;
+                    output.Add(line);
                     line = sr.ReadLine();
                 }
                 return output;
-                sr.Close();
+                //sr.Close();
             }catch(IOException e){
                 Console.WriteLine("ERROR archivo.read() "+e.Message);
                 return output;
