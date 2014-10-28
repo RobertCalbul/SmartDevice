@@ -45,16 +45,17 @@ namespace LightMeter.Clases
                 StringBuilder sb = new StringBuilder();
                 sb.AppendLine("");
                 sb.AppendLine("*------------------------*");
-                sb.AppendLine("Codigo Servicio: " + this.code_service);
-                sb.AppendLine("Fecha-Hora: " + this.hour_date);
-                sb.AppendLine("Coordenadas: " + this.coordenate);
-                sb.AppendLine("Direccion: " + this.adress);
-                sb.AppendLine("Motivo: " + this.motives);
-                sb.AppendLine("Nombre foto: " + this.file_name);
+                sb.AppendLine("NUMERO_DE_SERVICIO " + this.code_service);
+                sb.AppendLine("FECHA_DE_ESTADO " + this.hour_date);
+                sb.AppendLine("HORA_DEL_ESTADO ", this.hour_date);
+                sb.AppendLine("OBSERVACION " + this.motives);          
+                sb.AppendLine("NOMBRE_FOTO " + this.file_name);
+                sb.AppendLine("COORDENADA " + this.coordenate);
+                sb.AppendLine("DIRECCION" + this.adress);      
                 sb.AppendLine("*------------------------*");
 
 
-                using (StreamWriter out_file = new StreamWriter(path + @"\Problema.txt", true))
+                using (StreamWriter out_file = new StreamWriter(path + @"\lecturas.dat", true))
                 {
                     out_file.Write(sb.ToString());
                 }
@@ -75,10 +76,10 @@ namespace LightMeter.Clases
 
                 sb.AppendLine("");
                 sb.AppendLine("*------------------------*");
-                sb.AppendLine("Codigo Servicio: " + this.code_service);
-                sb.AppendLine("Lectura Actual: " + this.actual_read);
-                sb.AppendLine("Fecha-Hora: " + this.hour_date);
-                sb.AppendLine("Coordenadas: " + this.coordenate);
+                sb.AppendLine("NUMERO_DE_SERVICIO " + this.code_service);
+                sb.AppendLine("LECTURA_ACTUAL " + this.actual_read);
+                sb.AppendLine("FECHA_DE_ESTADO " + this.hour_date);
+                sb.AppendLine("ESTADO " + this.coordenate);
                 sb.AppendLine("*------------------------*");
                 using (StreamWriter out_file = new StreamWriter(path + @"\Resultado.txt", true))
                 {
