@@ -47,7 +47,7 @@ namespace LightMeter.Clases
                 sb.AppendLine("*------------------------*");
                 sb.AppendLine("NUMERO_DE_SERVICIO " + this.code_service);
                 sb.AppendLine("FECHA_DE_ESTADO " + this.hour_date);
-                sb.AppendLine("HORA_DEL_ESTADO ", this.hour_date);
+                sb.AppendLine("HORA_DEL_ESTADO "+ this.hour_date);
                 sb.AppendLine("OBSERVACION " + this.motives);          
                 sb.AppendLine("NOMBRE_FOTO " + this.file_name);
                 sb.AppendLine("COORDENADA " + this.coordenate);
@@ -55,10 +55,15 @@ namespace LightMeter.Clases
                 sb.AppendLine("*------------------------*");
 
 
+                using (StreamWriter out_file = new StreamWriter(path + @"\lecturas.txt", true))
+                {
+                    out_file.Write(sb.ToString());
+                }
                 using (StreamWriter out_file = new StreamWriter(path + @"\lecturas.dat", true))
                 {
                     out_file.Write(sb.ToString());
                 }
+
                 return 1;
             }
             catch (Exception e)
@@ -82,6 +87,10 @@ namespace LightMeter.Clases
                 sb.AppendLine("ESTADO " + this.coordenate);
                 sb.AppendLine("*------------------------*");
                 using (StreamWriter out_file = new StreamWriter(path + @"\Resultado.txt", true))
+                {
+                    out_file.Write(sb.ToString());
+                }
+                using (StreamWriter out_file = new StreamWriter(path + @"\Resultado.dat", true))
                 {
                     out_file.Write(sb.ToString());
                 }

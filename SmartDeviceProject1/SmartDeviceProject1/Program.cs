@@ -3,7 +3,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace SmartDeviceProject1
+namespace LightMeter
 {
     static class Program
     {

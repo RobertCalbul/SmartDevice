@@ -1,4 +1,4 @@
-﻿namespace SmartDeviceProject1.interfaz
+﻿namespace LightMeter.interfaz
 {
     partial class TakeData
     {
@@ -47,11 +47,15 @@
             this.panelReadActual = new System.Windows.Forms.Panel();
             this.tReadActual = new System.Windows.Forms.TextBox();
             this.panelDateHour = new System.Windows.Forms.Panel();
-            this.tDateHour = new System.Windows.Forms.TextBox();
+            this.tN_medidor = new System.Windows.Forms.TextBox();
             this.panelCorrdenada = new System.Windows.Forms.Panel();
-            this.tCoordenate = new System.Windows.Forms.TextBox();
+            this.tObservacion = new System.Windows.Forms.TextBox();
             this.back = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panelVerificador = new System.Windows.Forms.Panel();
+            this.tverificador = new System.Windows.Forms.TextBox();
             this.panelCodServicio.SuspendLayout();
             this.panelNodata.SuspendLayout();
             this.pSave.SuspendLayout();
@@ -62,6 +66,8 @@
             this.panelReadActual.SuspendLayout();
             this.panelDateHour.SuspendLayout();
             this.panelCorrdenada.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panelVerificador.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelCodServicio
@@ -118,7 +124,7 @@
             // 
             this.pSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(143)))), ((int)(((byte)(143)))));
             this.pSave.Controls.Add(this.label5);
-            this.pSave.Location = new System.Drawing.Point(0, 185);
+            this.pSave.Location = new System.Drawing.Point(0, 213);
             this.pSave.Name = "pSave";
             this.pSave.Size = new System.Drawing.Size(120, 20);
             this.pSave.Click += new System.EventHandler(this.pSave_Click);
@@ -137,7 +143,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(129)))), ((int)(((byte)(128)))));
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(0, 160);
+            this.panel4.Location = new System.Drawing.Point(0, 187);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(120, 20);
             // 
@@ -148,7 +154,7 @@
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 20);
-            this.label4.Text = "COORDENADAS .";
+            this.label4.Text = "OBSERVACION.";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // panel3
@@ -166,7 +172,7 @@
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 20);
-            this.label3.Text = "FECHA Y HORA .";
+            this.label3.Text = "NUMERO MEDIDOR.";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // panel2
@@ -227,39 +233,39 @@
             // panelDateHour
             // 
             this.panelDateHour.BackColor = System.Drawing.Color.Transparent;
-            this.panelDateHour.Controls.Add(this.tDateHour);
+            this.panelDateHour.Controls.Add(this.tN_medidor);
             this.panelDateHour.Location = new System.Drawing.Point(125, 135);
             this.panelDateHour.Name = "panelDateHour";
             this.panelDateHour.Size = new System.Drawing.Size(120, 20);
             // 
-            // tDateHour
+            // tN_medidor
             // 
-            this.tDateHour.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tDateHour.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tDateHour.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(128)))), ((int)(((byte)(113)))));
-            this.tDateHour.Location = new System.Drawing.Point(0, 0);
-            this.tDateHour.Name = "tDateHour";
-            this.tDateHour.Size = new System.Drawing.Size(120, 21);
-            this.tDateHour.TabIndex = 0;
+            this.tN_medidor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tN_medidor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tN_medidor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(128)))), ((int)(((byte)(113)))));
+            this.tN_medidor.Location = new System.Drawing.Point(0, 0);
+            this.tN_medidor.Name = "tN_medidor";
+            this.tN_medidor.Size = new System.Drawing.Size(120, 21);
+            this.tN_medidor.TabIndex = 0;
             // 
             // panelCorrdenada
             // 
             this.panelCorrdenada.BackColor = System.Drawing.Color.Transparent;
-            this.panelCorrdenada.Controls.Add(this.tCoordenate);
-            this.panelCorrdenada.Location = new System.Drawing.Point(125, 160);
+            this.panelCorrdenada.Controls.Add(this.tObservacion);
+            this.panelCorrdenada.Location = new System.Drawing.Point(125, 187);
             this.panelCorrdenada.Name = "panelCorrdenada";
             this.panelCorrdenada.Size = new System.Drawing.Size(120, 20);
             // 
-            // tCoordenate
+            // tObservacion
             // 
-            this.tCoordenate.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tCoordenate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tCoordenate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(129)))), ((int)(((byte)(128)))));
-            this.tCoordenate.Location = new System.Drawing.Point(0, 0);
-            this.tCoordenate.Multiline = true;
-            this.tCoordenate.Name = "tCoordenate";
-            this.tCoordenate.Size = new System.Drawing.Size(120, 20);
-            this.tCoordenate.TabIndex = 0;
+            this.tObservacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tObservacion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tObservacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(129)))), ((int)(((byte)(128)))));
+            this.tObservacion.Location = new System.Drawing.Point(0, 0);
+            this.tObservacion.Multiline = true;
+            this.tObservacion.Name = "tObservacion";
+            this.tObservacion.Size = new System.Drawing.Size(120, 20);
+            this.tObservacion.TabIndex = 0;
             // 
             // back
             // 
@@ -270,16 +276,51 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(81, 16);
+            this.pictureBox1.Location = new System.Drawing.Point(81, 8);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(84, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label7);
+            this.panel5.Location = new System.Drawing.Point(0, 161);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(120, 20);
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(129)))), ((int)(((byte)(128)))));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label7.Location = new System.Drawing.Point(0, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(120, 20);
+            this.label7.Text = "VERIFICADOR.";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // panelVerificador
+            // 
+            this.panelVerificador.Controls.Add(this.tverificador);
+            this.panelVerificador.Location = new System.Drawing.Point(125, 161);
+            this.panelVerificador.Name = "panelVerificador";
+            this.panelVerificador.Size = new System.Drawing.Size(120, 20);
+            // 
+            // tverificador
+            // 
+            this.tverificador.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tverificador.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tverificador.Location = new System.Drawing.Point(0, 0);
+            this.tverificador.Name = "tverificador";
+            this.tverificador.Size = new System.Drawing.Size(120, 21);
+            this.tverificador.TabIndex = 0;
             // 
             // TakeData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.panelVerificador);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.back);
@@ -305,35 +346,46 @@
             this.panelReadActual.ResumeLayout(false);
             this.panelDateHour.ResumeLayout(false);
             this.panelCorrdenada.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panelVerificador.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.TextBox tCodServ;
+        private System.Windows.Forms.TextBox tReadActual;
+        private System.Windows.Forms.TextBox tN_medidor;
+        private System.Windows.Forms.TextBox tverificador;
+        private System.Windows.Forms.TextBox tObservacion;
+
+        private System.Windows.Forms.Panel panelDateHour;
+        private System.Windows.Forms.Panel panelCorrdenada;
         private System.Windows.Forms.Panel panelCodServicio;
         private System.Windows.Forms.Panel panelNodata;
         private System.Windows.Forms.Panel pSave;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panelReadActual;
-        private System.Windows.Forms.TextBox tCodServ;
-        private System.Windows.Forms.TextBox tReadActual;
-        private System.Windows.Forms.TextBox tDateHour;
-        private System.Windows.Forms.TextBox tCoordenate;
-        private System.Windows.Forms.Panel panelDateHour;        
-        private System.Windows.Forms.Panel panelCorrdenada;
+        private System.Windows.Forms.Panel panelVerificador;
+        private System.Windows.Forms.Panel back;
+
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel back;
+        private System.Windows.Forms.Label label6;        
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ListBox listBox1;
+        
+       
+        
 
     }
 }

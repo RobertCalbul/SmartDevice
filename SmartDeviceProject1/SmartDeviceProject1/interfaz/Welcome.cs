@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 //using Microsoft.WindowsMobile.Sample.Location;
 
-namespace SmartDeviceProject1.interfaz
+namespace LightMeter.interfaz
 {
     public partial class Welcome : UserControl
     {

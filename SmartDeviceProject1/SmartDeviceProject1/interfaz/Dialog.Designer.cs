@@ -1,4 +1,4 @@
-﻿namespace SmartDeviceProject1.interfaz
+﻿namespace LightMeter.interfaz
 {
     partial class Dialog
     {

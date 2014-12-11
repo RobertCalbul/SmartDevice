@@ -19,7 +19,7 @@
     <FormFactorID>
     </FormFactorID>
     <ApplicationIcon>logotipo light.ico</ApplicationIcon>
-    <StartupObject>SmartDeviceProject1.Program</StartupObject>
+    <StartupObject>LightMeter.Program</StartupObject>
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -78,7 +78,11 @@
   <ItemGroup>
     <Compile Include="Clases\Archivo.cs" />
     <Compile Include="Clases\GoogleMap.cs" />
+    <Compile Include="Clases\Input_data.cs" />
+    <Compile Include="Clases\Output_data.cs" />
     <Compile Include="Clases\Take_Data.cs" />
+    <Compile Include="controlador\Controller_input_data.cs" />
+    <Compile Include="controlador\Controller_output_data.cs" />
     <Compile Include="interfaz\Dialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +149,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="utilidades\Date_hour.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="img\icon.png" />

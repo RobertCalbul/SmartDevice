@@ -1,23 +1,27 @@
 ﻿using System;
 using System.Linq;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using SmartDeviceProject1.interfaz;
+using LightMeter.interfaz;
 using System.Threading;
 using Microsoft.WindowsMobile.Samples.Location;
 using LightMeter.Clases;
+using LightMeter.controlador;
+using System.Collections.Generic;
 
-namespace SmartDeviceProject1
+namespace LightMeter
 {
     public partial class Form1 : Form
     {
-        private Welcome _welcome;
+        private LightMeter.interfaz.Welcome _welcome;
         public Gps objGps;
         public List<String> cod_service_auto = new List<string>();
+        public String filename = null;
+       // public List<Input_data> list_input_data = new List<Input_data>();
+
         public Form1()
         {
             InitializeComponent();
@@ -32,7 +36,7 @@ namespace SmartDeviceProject1
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if ((e.KeyCode == System.Windows.Forms.Keys.Up))
+            /*if ((e.KeyCode == System.Windows.Forms.Keys.Up))
             {
                 // Up
             }
@@ -53,7 +57,7 @@ namespace SmartDeviceProject1
             if ((e.KeyCode == System.Windows.Forms.Keys.Enter))
             {
                 // Enter
-            }
+            }*/
 
         }
 
@@ -93,7 +97,16 @@ namespace SmartDeviceProject1
 
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                List<String> listaRuta = new Archivo().readRuta(ofd.FileName);
+                Controller_input_data cid = new Controller_input_data();
+                this.filename = ofd.FileName;
+                List<Input_data> list_input_data = cid.read_file(ofd.FileName);
+                List<String> listaRuta = null;
+
+                foreach (Input_data ruta in list_input_data)
+                {
+                    listaRuta.Add(ruta.codigo);
+                }
+                
                 if (listaRuta != null)
                 {
                     this.cod_service_auto = listaRuta;
@@ -101,10 +114,6 @@ namespace SmartDeviceProject1
                 else {
                     MessageBox.Show("No se puede cargar este archivo.","",MessageBoxButtons.OK,MessageBoxIcon.None,MessageBoxDefaultButton.Button1);
                 } 
-            }
-            else
-            {
-
             }
         }
 

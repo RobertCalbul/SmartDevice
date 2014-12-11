@@ -1,4 +1,4 @@
-﻿namespace SmartDeviceProject1
+﻿namespace LightMeter
 {
     partial class Form1
     {
