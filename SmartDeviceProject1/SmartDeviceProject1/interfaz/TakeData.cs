@@ -36,6 +36,7 @@ namespace LightMeter.interfaz
         List<Input_data> list_input_data = null;
         
         #endregion 
+
         public TakeData(Form1 main)
         {
             InitializeComponent();
@@ -58,14 +59,29 @@ namespace LightMeter.interfaz
             #endregion
 
             #region comprueba que existan los codigos de servicio o no
-            if (this.main.cod_service_auto.Count < 1) {
+            if (this.main.cod_service_auto.Count < 1)
+            {
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                DialogResult dr =  MessageBox.Show("No se cargo las rutas\n¿Desea cargarlas ahora?.","",buttons,MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+                DialogResult dr = MessageBox.Show("Debe cargar las ahora.", "", buttons, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
                 if (dr == DialogResult.Yes)
                 {
-                    this.main.cargarRutas();
-                    this.list_input_data = cid.read_file(this.main.filename);
+                    if (this.main.cargarRutas() > 0)
+                    {
+                        this.list_input_data = cid.read_file(this.main.filename);
+                    }
+                    else
+                    {
+                        this.list_input_data = new List<Input_data>();
+                        Input_data _ID = new Input_data("00001", "2", "000000004521", "000061869", "005", "0000194", "1.00376");
+                        list_input_data.Add(_ID);
+
+                    }
                 }
+            }
+            else {
+                this.list_input_data = new List<Input_data>();
+                Input_data _ID = new Input_data("00001", "2", "000000004521", "000061869", "005", "0000194", "1.00376");
+                list_input_data.Add(_ID);
             }
             #endregion
 
@@ -74,45 +90,18 @@ namespace LightMeter.interfaz
             objGps.Close();
             if (!objGps.Opened)
             {
-                // objgps.DeviceStateChanged += new DeviceStateChangedEventHandler(gps_DeviceStateChange);
                 objGps.LocationChanged += new LocationChangedEventHandler(gps_LocationChanged);
                 objGps.Open();
             }
             #endregion
         }
-        #region seteo y actualizacion de coordenadas por gps
-        private void gps_LocationChanged(object sender, LocationChangedEventArgs args)
-        {
-            //this.tCoordenate.Text = "";
-            GpsPosition position = args.Position;
-            ControlUpdater cu = UpdateControl;
-            if (position.LatitudeValid && position.LongitudeValid)
-            {
-                String coordenadas = position.Latitude.ToString() + " " + position.Longitude.ToString();
-                this.coordenateX = position.Latitude.ToString("000000.00");
-                this.coordenateY = position.Longitude.ToString("000000.00");
-                //Invoke(cu, tObservacion, coordenadas);
-            }
-            //if (position.LongitudeValid)
-            //Invoke(cu, txtgpslong, position.Longitude.ToString());
-            //tCoordenate.Text =position.Latitude.ToString()+"  "+position.Longitude.ToString();
-            /*if (position.HeadingValid)
-                Invoke(cu, txtgpsheading, position.Heading.ToString());
-            if (position.SatellitesInViewCountValid)
-                Invoke(cu, txtgpssatellite, position.SatellitesInViewCount.ToString());*/
-        }
-        private delegate void ControlUpdater(Control c, string s);
-        private void UpdateControl(Control con, string strdata)
-        {
-            con.Text = strdata;
-        }
-        #endregion 
+       
         //pasa a la siguiente interfaz
         private void panel6_Click_1(object sender, EventArgs e)
         {
             try
             {
-                if (this.list_input_data != null)
+                if (this.list_input_data.Count > 0)
                 {
                     this.main.PanelPrincipal.Controls.Clear();
                     this.main.PanelPrincipal.Controls.Add(new NoAcces(this.main));
@@ -127,48 +116,51 @@ namespace LightMeter.interfaz
             }
         }
        
-
         private void pSave_Click(object sender, EventArgs e)
-        {   
+        {
+            save_data();            
+        }
 
+        private void  save_data()
+        {
             if (validacionFormulario())
             {
 
                 Controller_output_data cod = new Controller_output_data();
-            
+
                 Output_data od = null;
 
                 String codigo = this.tCodServ.Text.Trim();
-                
+
                 String verificador = this.tverificador.Text.Trim();
-                
+
                 String n_medidor = this.tN_medidor.Text.Trim();
-                
+
                 String lectura_mes_cero = this.datos_externos.lectura_mes_cero;
-                
+
                 String prom_consumo = this.datos_externos.prom_consumo;
-                
+
                 String lectura_actual = this.tReadActual.Text.Trim();
-                
+
                 String consumo = cod.get_consumo(lectura_actual, lectura_mes_cero);
-                
+
                 String fecha = this._date_hour.get_date();
-                
+
                 String hora = this._date_hour.get_hour();
-                
+
                 String error = cod.get_error_factor(prom_consumo, lectura_mes_cero);
-                
+
                 String observacion = this.tObservacion.Text.Trim().Equals("") ? "0" : this.tObservacion.Text.Trim();
-                
+
                 String nombre_foto = "";
-                
+
                 String coordX = this.coordenateX;
-                
+
                 String CoordY = this.coordenateY;
 
 
-                od = new Output_data(codigo,verificador,n_medidor,lectura_mes_cero,prom_consumo,lectura_actual,
-                                     consumo,fecha,hora,error,observacion,nombre_foto, coordX, CoordY);
+                od = new Output_data(codigo, verificador, n_medidor, lectura_mes_cero, prom_consumo, lectura_actual,
+                                     consumo, fecha, hora, error, observacion, nombre_foto, coordX, CoordY);
 
 
                 if (cod.write_file(od) > 0)
@@ -180,8 +172,35 @@ namespace LightMeter.interfaz
                     MessageBox.Show("Ha ocurrido un error al guardar, por favor intentelo nuevamente.", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                 }
             }
-            else {
+            else
+            {
                 MessageBox.Show("Verifique todos los campo.", "", MessageBoxButtons.OK, MessageBoxIcon.None, MessageBoxDefaultButton.Button1);
+            }
+        }
+
+        private void TakeData_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((e.KeyCode == System.Windows.Forms.Keys.Up))
+            {
+                // Up
+            }
+            if ((e.KeyCode == System.Windows.Forms.Keys.Down))
+            {
+                // Down
+            }
+            if ((e.KeyCode == System.Windows.Forms.Keys.Left))
+            {
+                // Left
+            }
+            if ((e.KeyCode == System.Windows.Forms.Keys.Right))
+            {
+                this.main.PanelPrincipal.Controls.Clear();
+                this.main.PanelPrincipal.Controls.Add(new NoAcces(this.main));
+                // Right
+            }
+            if ((e.KeyCode == System.Windows.Forms.Keys.Enter))
+            {
+                save_data();
             }
         }
 
@@ -252,7 +271,25 @@ namespace LightMeter.interfaz
         }
         #endregion
 
-        
+        #region seteo y actualizacion de coordenadas por gps
+        private void gps_LocationChanged(object sender, LocationChangedEventArgs args)
+        {
+            GpsPosition position = args.Position;
+            ControlUpdater cu = UpdateControl;
+            
+            if (position.LatitudeValid && position.LongitudeValid)
+            {
+                String coordenadas = position.Latitude.ToString() + " " + position.Longitude.ToString();
+                this.coordenateX = position.Latitude.ToString("000000.00");
+                this.coordenateY = position.Longitude.ToString("000000.00");
+            }
+        }
+        private delegate void ControlUpdater(Control c, string s);
+        private void UpdateControl(Control con, string strdata)
+        {
+            con.Text = strdata;
+        }
+        #endregion 
 
         #region algunas validaciones
         private Boolean validacionFormulario()
@@ -285,5 +322,6 @@ namespace LightMeter.interfaz
             else e.Handled = true;
         }
         #endregion 
+      
     }
 }

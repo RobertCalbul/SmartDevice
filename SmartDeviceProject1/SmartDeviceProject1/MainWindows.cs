@@ -88,33 +88,62 @@ namespace LightMeter
             cargarRutas();
         }
 
-        public void cargarRutas()
+        public int cargarRutas()
         {
-            String path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Archivos txt(*.txt) | *.txt";
-            ofd.InitialDirectory = "\\My Documents";
+            List<String> listaRuta = new List<string>();
 
-            if (ofd.ShowDialog() == DialogResult.OK)
+            try
             {
-                Controller_input_data cid = new Controller_input_data();
-                this.filename = ofd.FileName;
-                List<Input_data> list_input_data = cid.read_file(ofd.FileName);
-                List<String> listaRuta = null;
-
-                foreach (Input_data ruta in list_input_data)
-                {
-                    listaRuta.Add(ruta.codigo);
-                }
                 
-                if (listaRuta != null)
+                OpenFileDialog ofd = new OpenFileDialog();
+                ofd.Filter = "Archivos txt(*.txt) | *.txt";
+                ofd.InitialDirectory = "\\My Documents";
+
+                if (ofd.ShowDialog() == DialogResult.OK)
                 {
-                    this.cod_service_auto = listaRuta;
+                        Controller_input_data cid = new Controller_input_data();
+                        this.filename = ofd.FileName;
+                        List<Input_data> list_input_data = cid.read_file(ofd.FileName);
+
+                        Input_data _ID = new Input_data("00001", "2", "000000004521", "000061869", "005", "0000194", "1.00376");
+                        list_input_data.Add(_ID);
+                        foreach (Input_data ruta in list_input_data)
+                        {
+                            listaRuta.Add(ruta.codigo);
+                        }
+
+                        if (listaRuta != null)
+                        {
+                            this.cod_service_auto = listaRuta;
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se puede cargar este archivo.", "", MessageBoxButtons.OK, MessageBoxIcon.None, MessageBoxDefaultButton.Button1);
+                        }
+                        return 1;
                 }
-                else {
-                    MessageBox.Show("No se puede cargar este archivo.","",MessageBoxButtons.OK,MessageBoxIcon.None,MessageBoxDefaultButton.Button1);
-                } 
-            }
+                else
+                {
+                    
+                    List<Input_data> list_input_data = new List<Input_data>();
+                    Input_data _ID = new Input_data("00001", "2", "000000004521", "000061869", "005", "0000194", "1.00376");
+                    list_input_data.Add(_ID);
+                    foreach (Input_data ruta in list_input_data)
+                    {
+                        listaRuta.Add(ruta.codigo);
+                    }
+
+                    if (listaRuta != null)
+                    {
+                        this.cod_service_auto = listaRuta;
+                    }
+                    return 0;
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show("A ocurrido un error al cargar archivo de rutas.");
+                return -1;
+            } 
         }
 
     }

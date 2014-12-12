@@ -17,6 +17,7 @@ namespace LightMeter.interfaz
 {
     public partial class NoAcces : UserControl
     {
+
         #region variables globales
 
         
@@ -39,6 +40,7 @@ namespace LightMeter.interfaz
         List<Input_data> list_input_data = null;
 
         #endregion
+
         public NoAcces(Form1 main)
         {
         
@@ -50,28 +52,43 @@ namespace LightMeter.interfaz
             
             this._date_hour = new Date_hour();
             
-            this.list_input_data = cid.read_file(this.main.filename);
+            //this.list_input_data = cid.read_file(this.main.filename);
             
             #region comprueba que los codigos de servicio o rutas esten cargados
-            
-            
+
+
             if (this.main.cod_service_auto.Count < 1)
             {
-            
+
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                
+
                 DialogResult dr = MessageBox.Show("No se cargo las rutas\n¿Desea cargarlas ahora?.", "", buttons, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
-                
+
                 if (dr == DialogResult.Yes)
-                
                 {
-                
-                    this.main.cargarRutas();
+                    if (this.main.cargarRutas() > 0)
+                    {
+                        this.list_input_data = cid.read_file(this.main.filename);
+                    }
+                    else
+                    {
+                        this.list_input_data = new List<Input_data>();
+                        Input_data _ID = new Input_data("00001", "2", "000000004521", "000061869", "005", "0000194", "1.00376");
+                        list_input_data.Add(_ID);
+
+                    }
                 }
 
             }
+            else 
+            {
+                this.list_input_data = new List<Input_data>();
+                Input_data _ID = new Input_data("00001", "2", "000000004521", "000061869", "005", "0000194", "1.00376");
+                list_input_data.Add(_ID);
+            }
 
             #endregion
+
             #region configuracio y activacion gps
             objGps = this.main.objGps;// new Gps();
             objGps.Close();
@@ -86,7 +103,11 @@ namespace LightMeter.interfaz
 
         private void panelSave_Click(object sender, EventArgs e)
         {
+            save_data();
+        }
 
+        private void save_data() 
+        {
             if (validacionFormulario())
             {
 
@@ -150,7 +171,9 @@ namespace LightMeter.interfaz
 
         private void CameraCapture(bool video)
         {
-            
+            /*
+             * @params video identifica si el dispositivo cuenta con una camara.
+             */
             CameraCaptureDialog cameraCapture = new CameraCaptureDialog();
             
             cameraCapture.Owner = this;
@@ -200,12 +223,39 @@ namespace LightMeter.interfaz
              }else{cameraCapture.Mode = CameraCaptureMode.Still;cameraCapture.DefaultFileName = @"imagetest.jpg";}
             */
         }
+
         private void back_Click(object sender, EventArgs e)
         {
 
             this.main.PanelPrincipal.Controls.Clear();
             
             this.main.PanelPrincipal.Controls.Add(new TakeData(this.main));
+        }
+
+        private void NoAcces_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((e.KeyCode == System.Windows.Forms.Keys.Up))
+            {
+                // Up
+            }
+            if ((e.KeyCode == System.Windows.Forms.Keys.Down))
+            {
+                // Down
+            }
+            if ((e.KeyCode == System.Windows.Forms.Keys.Left))
+            {
+                this.main.PanelPrincipal.Controls.Clear();
+                this.main.PanelPrincipal.Controls.Add(new TakeData(this.main));
+            }
+            if ((e.KeyCode == System.Windows.Forms.Keys.Right))
+            {
+
+                // Right
+            }
+            if ((e.KeyCode == System.Windows.Forms.Keys.Enter))
+            {
+                save_data();
+            }
         }
 
         #region validaciones
@@ -345,35 +395,8 @@ namespace LightMeter.interfaz
         }
         #endregion
 
-        private void NoAcces_KeyDown(object sender, KeyEventArgs e)
-        {
-            if ((e.KeyCode == System.Windows.Forms.Keys.Up))
-            {
-                MessageBox.Show("UP");
-                // Up
-            }
-            if ((e.KeyCode == System.Windows.Forms.Keys.Down))
-            {
-                // Down
-            }
-            if ((e.KeyCode == System.Windows.Forms.Keys.Left))
-            {
-                // Left
-            }
-            if ((e.KeyCode == System.Windows.Forms.Keys.Right))
-            {
-
-                // Right
-            }
-            if ((e.KeyCode == System.Windows.Forms.Keys.Enter))
-            {
-                // Enter
-            }
-        }
 
 
-
-
-
+       
     }
 }

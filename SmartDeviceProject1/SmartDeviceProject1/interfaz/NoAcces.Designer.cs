@@ -52,6 +52,7 @@
             this.cMotivo = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.back = new System.Windows.Forms.Panel();
+            this.pictureBoxBack = new System.Windows.Forms.PictureBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.panelReadActual = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
@@ -67,6 +68,7 @@
             this.panelDateHour.SuspendLayout();
             this.panelCoordenada.SuspendLayout();
             this.panelMotive.SuspendLayout();
+            this.back.SuspendLayout();
             this.panelReadActual.SuspendLayout();
             this.panelReadActual2.SuspendLayout();
             this.SuspendLayout();
@@ -170,7 +172,6 @@
             this.panelLoadPhoto.Location = new System.Drawing.Point(0, 64);
             this.panelLoadPhoto.Name = "panelLoadPhoto";
             this.panelLoadPhoto.Size = new System.Drawing.Size(120, 72);
-            this.panelLoadPhoto.Click += new System.EventHandler(this.panelLoadPhoto_Click);
             // 
             // lblUploadPhoto
             // 
@@ -281,10 +282,20 @@
             // 
             // back
             // 
-            this.back.Location = new System.Drawing.Point(0, 25);
+            this.back.Controls.Add(this.pictureBoxBack);
+            this.back.Location = new System.Drawing.Point(0, 8);
             this.back.Name = "back";
             this.back.Size = new System.Drawing.Size(40, 40);
             this.back.Click += new System.EventHandler(this.back_Click);
+            // 
+            // pictureBoxBack
+            // 
+            this.pictureBoxBack.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBoxBack.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBack.Image")));
+            this.pictureBoxBack.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxBack.Name = "pictureBoxBack";
+            this.pictureBoxBack.Size = new System.Drawing.Size(40, 40);
+            this.pictureBoxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             // 
             // listBox1
             // 
@@ -334,9 +345,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.panelReadActual2);
             this.Controls.Add(this.panelReadActual);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.back);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panelCodService);
@@ -362,6 +373,7 @@
             this.panelDateHour.ResumeLayout(false);
             this.panelCoordenada.ResumeLayout(false);
             this.panelMotive.ResumeLayout(false);
+            this.back.ResumeLayout(false);
             this.panelReadActual.ResumeLayout(false);
             this.panelReadActual2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -378,25 +390,30 @@
         private System.Windows.Forms.Panel panelLoadPhoto;
         private System.Windows.Forms.Panel panelCodService;
         private System.Windows.Forms.Panel panelDateHour;
+        private System.Windows.Forms.Panel back;
         private System.Windows.Forms.Panel panelCoordenada;
         private System.Windows.Forms.Panel panelMotive;
+        private System.Windows.Forms.Panel panelReadActual;
+        private System.Windows.Forms.Panel panelReadActual2;
+
+
+        private System.Windows.Forms.PictureBox pTakePhoto;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox tCodeService;
+        private System.Windows.Forms.TextBox tReadActual;
         private System.Windows.Forms.TextBox tN_medidor;
-        private System.Windows.Forms.TextBox tVerificador;
+        private System.Windows.Forms.TextBox tVerificador;        
+        private System.Windows.Forms.ComboBox cMotivo;
+        private System.Windows.Forms.ListBox listBox1;
+        
+
+        private System.Windows.Forms.Label lblUploadPhoto; 
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cMotivo;
-        private System.Windows.Forms.PictureBox pTakePhoto;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblUploadPhoto;
-        private System.Windows.Forms.Panel back;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Panel panelReadActual;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panelReadActual2;
-        private System.Windows.Forms.TextBox tReadActual;
+        private System.Windows.Forms.PictureBox pictureBoxBack;
     }
 }

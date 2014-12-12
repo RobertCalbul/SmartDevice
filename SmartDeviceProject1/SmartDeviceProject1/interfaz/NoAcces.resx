@@ -436,6 +436,25 @@
         AElFTkSuQmCC
 </value>
   </data>
+  <data name="pictureBoxBack.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuM4zml1AA
+        AALhSURBVFhH7ZcxaxRRFIW3sLCwsLCwsLDwB1haWooEFFEIqBDQwsJCKy2UqCGoLBolRRCLBaMGibKo
+        SMAQooiKLBhChIBRFoUQJYQIi4YQZf2W+xiHO7s79+3MrinmcJrMzs18zLv3vDe56rpUhuWjDMtHGZaP
+        MiwftRfr99qfJ4Pvnhem3N9mtRELmmM7bu7NXTi8Nb+6suau2tQWrDfF2ZM7hwAKfL/vpfvNppSxpifL
+        Z3YXwkDiQ5svV5ZX3E0GpYb1aWqht+ueogm7cHbc3WpQCljzc0v5I48URNSnd912BQYlwlpaqAyeeNq1
+        4aIiUKbx6TZXY1OLWDQKi7JvY58iUD667RrzSEy4MrO8sRh1xooWVgTK3VuuFgfe+uZCIA8syUZCSBEo
+        Q3y3d9Jr7qKyYgXZ2MSs6a1TYzScq0mgeKxoNkZN11/vKX4rL7uaxGqG1SgblS/tH/k6u+hqUlJ9rNhs
+        FAP9sTTvalKVxjJmI8vKu3Q1jcWyhv3h1ReqAr8YmaFlAz/Mv2ZWMIX/sIzZiGlt3hMmuHu2DwQmpdSd
+        rRmYGpYxGzvmGpYlGzvsGpa6tB7M6uXO7xlWV/+7GY5abxEH/QcfWJrd1wxBeCYYEZkVMQ8lhAOzQ8gk
+        1t4WWCKi4cbxx8bGJ0JLY3MMfHj+sftfiaVzi5iA+sCmfsURNWeE5FtyI2ksEQ/jkTxYoUTNFKe1PYdV
+        H0vEaYkzU+xJBrP0NABt4CoTqxmWiGOW5VSDGZor3aMMkKtMoHisQJYTjpht3rJjNpEHluj9+GdmW3HU
+        Nbf5flkE8sYScZ4hIxRHXfOCJ4anfb8yWsQSlWe+E4OWHKY1nw2V7F8cibBEpCgZYclhvlBcTZxSwBIR
+        XXfOTTQ5jPDTr8qquztOqWGJyGEOmXWjTo6dRqWMJaKHWK9w1LHEPxZ/up8NaguWiOljBiXqaD531aY2
+        YgUivXw3zU5gtaAMy0cZll3V6l8mivbvT5DnKwAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="$this.FormFactorShadowProperty" xml:space="preserve">
     <value>Pocket_PC</value>
   </metadata>

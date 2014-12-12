@@ -76,8 +76,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clases\Archivo.cs" />
-    <Compile Include="Clases\GoogleMap.cs" />
     <Compile Include="Clases\Input_data.cs" />
     <Compile Include="Clases\Output_data.cs" />
     <Compile Include="Clases\Take_Data.cs" />

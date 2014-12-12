@@ -25,6 +25,7 @@ namespace LightMeter.controlador
                                                 
                 StringBuilder sb = new StringBuilder();
 
+                sb.AppendLine();
                 sb.Append(_output_data.codigo);
                 sb.Append(",");
                 sb.Append(_output_data.verificacion);

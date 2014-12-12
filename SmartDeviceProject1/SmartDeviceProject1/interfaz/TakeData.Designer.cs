@@ -319,9 +319,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.panelVerificador);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.back);
             this.Controls.Add(this.panelCodServicio);
@@ -336,6 +336,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "TakeData";
             this.Size = new System.Drawing.Size(240, 280);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TakeData_KeyDown);
             this.panelCodServicio.ResumeLayout(false);
             this.panelNodata.ResumeLayout(false);
             this.pSave.ResumeLayout(false);
