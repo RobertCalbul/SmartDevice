@@ -21,8 +21,7 @@ namespace LightMeter.controlador
         {
 
             try
-            {
-                                                
+            {                                                
                 StringBuilder sb = new StringBuilder();
 
                 sb.AppendLine();
@@ -45,8 +44,6 @@ namespace LightMeter.controlador
                 sb.Append(_output_data.hora);
                 sb.Append(",");
                 sb.Append(_output_data.factor_error);
-                sb.Append(","); 
-                sb.Append(_output_data.observacion);
                 sb.Append(","); 
                 sb.Append(_output_data.ruta_foto);
                 sb.Append(","); 
@@ -85,7 +82,7 @@ namespace LightMeter.controlador
 
                 double error = (((prom_consumo / lectura_mes_cero) * 1.2) + 1);
 
-                return error.ToString("0.00000");
+                return error.ToString();
             }
             catch (Exception e) 
             {
@@ -110,7 +107,7 @@ namespace LightMeter.controlador
 
                 int consumo = lectura_actual - lectura_mes_cero;
 
-                return consumo.ToString("0000000");
+                return consumo.ToString();
 
             }
             catch (Exception e) 

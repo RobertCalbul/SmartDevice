@@ -33,9 +33,9 @@
             this.mainMenu1 = new System.Windows.Forms.MainMenu();
             this.menuItem1 = new System.Windows.Forms.MenuItem();
             this.menuItem3 = new System.Windows.Forms.MenuItem();
+            this.menuItemRutas = new System.Windows.Forms.MenuItem();
             this.PanelPrincipal = new System.Windows.Forms.Panel();
             this.Timer = new System.Windows.Forms.Timer();
-            this.menuItemRutas = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // mainMenu1
@@ -53,6 +53,11 @@
             this.menuItem3.Text = "Quit";
             this.menuItem3.Click += new System.EventHandler(this.menuItem3_Click);
             // 
+            // menuItemRutas
+            // 
+            this.menuItemRutas.Text = "Cargar Rutas";
+            this.menuItemRutas.Click += new System.EventHandler(this.menuItemRutas_Click);
+            // 
             // PanelPrincipal
             // 
             this.PanelPrincipal.AutoScroll = true;
@@ -61,15 +66,11 @@
             this.PanelPrincipal.Location = new System.Drawing.Point(0, 0);
             this.PanelPrincipal.Name = "PanelPrincipal";
             this.PanelPrincipal.Size = new System.Drawing.Size(240, 294);
+            this.PanelPrincipal.GotFocus += new System.EventHandler(this.PanelPrincipal_GotFocus);
             // 
             // Timer
             // 
             this.Timer.Tick += new System.EventHandler(this.Timer_Tick);
-            // 
-            // menuItemRutas
-            // 
-            this.menuItemRutas.Text = "Cargar Rutas";
-            this.menuItemRutas.Click += new System.EventHandler(this.menuItemRutas_Click);
             // 
             // Form1
             // 

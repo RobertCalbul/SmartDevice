@@ -39,18 +39,24 @@ namespace LightMeter.interfaz
 
         List<Input_data> list_input_data = null;
 
+        private UserControl takedata;
+
         #endregion
 
-        public NoAcces(Form1 main)
+        public NoAcces(Form1 main, UserControl takedata)
         {
         
             InitializeComponent();
             
             this.main = main;
 
+            this.takedata = takedata;
+
             this.tCodeService.Focus();
             
             this._date_hour = new Date_hour();
+
+            //this.takedata.
             
             //this.list_input_data = cid.read_file(this.main.filename);
             
@@ -70,21 +76,22 @@ namespace LightMeter.interfaz
                     {
                         this.list_input_data = cid.read_file(this.main.filename);
                     }
-                    else
+                    /*else
                     {
                         this.list_input_data = new List<Input_data>();
                         Input_data _ID = new Input_data("00001", "2", "000000004521", "000061869", "005", "0000194", "1.00376");
                         list_input_data.Add(_ID);
 
-                    }
+                    }*/
                 }
 
             }
             else 
             {
-                this.list_input_data = new List<Input_data>();
+                this.list_input_data = cid.read_file(this.main.filename);
+               /* this.list_input_data = new List<Input_data>();
                 Input_data _ID = new Input_data("00001", "2", "000000004521", "000061869", "005", "0000194", "1.00376");
-                list_input_data.Add(_ID);
+                list_input_data.Add(_ID);*/
             }
 
             #endregion
@@ -139,9 +146,9 @@ namespace LightMeter.interfaz
 
                 String nombre_foto = this.file_name;
 
-                String coordX = this.coordenateX;
+                String coordX = this.coordenateX == "" ? "0" : this.coordenateX;
 
-                String CoordY = this.coordenateY;
+                String CoordY = this.coordenateY == "" ? "0" : this.coordenateY;
 
 
                 od = new Output_data(codigo, verificador, n_medidor, lectura_mes_cero, prom_consumo, lectura_actual,
@@ -359,7 +366,6 @@ namespace LightMeter.interfaz
                 {
                     return id;
                 }
-                else return new Input_data();
             }
             return new Input_data();
         }
@@ -394,6 +400,23 @@ namespace LightMeter.interfaz
             con.Text = strdata;
         }
         #endregion
+
+        private void pictureBoxBack_Click(object sender, EventArgs e)
+        {
+            this.main.PanelPrincipal.Controls.Clear();
+
+            this.main.PanelPrincipal.Controls.Add(new TakeData(this.main));
+        }
+
+        private void tGuardar_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if ((e.KeyCode == System.Windows.Forms.Keys.Print))
+            {
+                save_data();
+            }
+     
+        }
 
 
 

@@ -27,8 +27,6 @@ namespace LightMeter.Clases
         
         public String factor_error { get; set; }
 
-        public String observacion { get; set; }
-
         public String ruta_foto { get; set; }
 
         public String coordenadaX { get; set; }
@@ -39,7 +37,7 @@ namespace LightMeter.Clases
 
         public Output_data( String codigo, String verificacion, String n_medidor, String lectura_mes_cero, 
                             String prom_consumo, String lectura_actual, String consumo, String fecha, 
-                            String hora, String factor_error, String observacion, String ruta_foto, 
+                            String hora, String factor_error, String ruta_foto, 
                             String coordenadaX, String coordenadaY ) 
         {
             this.codigo = codigo;
@@ -61,8 +59,6 @@ namespace LightMeter.Clases
             this.hora = hora;
 
             this.factor_error = factor_error;
-
-            this.observacion = observacion;
 
             this.ruta_foto = ruta_foto;
 

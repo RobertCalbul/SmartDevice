@@ -36,28 +36,13 @@ namespace LightMeter
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            /*if ((e.KeyCode == System.Windows.Forms.Keys.Up))
-            {
-                // Up
-            }
-            if ((e.KeyCode == System.Windows.Forms.Keys.Down))
-            {
-                // Down
-            }
+
             if ((e.KeyCode == System.Windows.Forms.Keys.Left))
-            {
-                // Left
-            }
-            if ((e.KeyCode == System.Windows.Forms.Keys.Right))
             {
                 this.PanelPrincipal.Controls.Clear();
                 this.PanelPrincipal.Controls.Add(new TakeData(this));
-                // Right
             }
-            if ((e.KeyCode == System.Windows.Forms.Keys.Enter))
-            {
-                // Enter
-            }*/
+
 
         }
 
@@ -90,8 +75,7 @@ namespace LightMeter
 
         public int cargarRutas()
         {
-            List<String> listaRuta = new List<string>();
-
+        
             try
             {
                 
@@ -101,28 +85,28 @@ namespace LightMeter
 
                 if (ofd.ShowDialog() == DialogResult.OK)
                 {
-                        Controller_input_data cid = new Controller_input_data();
-                        this.filename = ofd.FileName;
-                        List<Input_data> list_input_data = cid.read_file(ofd.FileName);
+                    List<String> listaRuta = new List<string>();
+                    Controller_input_data cid = new Controller_input_data();
+                    this.filename = ofd.FileName;
+                    List<Input_data> list_input_data = cid.read_file(ofd.FileName);
 
-                        Input_data _ID = new Input_data("00001", "2", "000000004521", "000061869", "005", "0000194", "1.00376");
-                        list_input_data.Add(_ID);
-                        foreach (Input_data ruta in list_input_data)
-                        {
-                            listaRuta.Add(ruta.codigo);
-                        }
+                    foreach (Input_data ruta in list_input_data)
+                    {
+                        listaRuta.Add(ruta.codigo);
+                    }
 
-                        if (listaRuta != null)
-                        {
-                            this.cod_service_auto = listaRuta;
-                        }
-                        else
-                        {
-                            MessageBox.Show("No se puede cargar este archivo.", "", MessageBoxButtons.OK, MessageBoxIcon.None, MessageBoxDefaultButton.Button1);
-                        }
-                        return 1;
+                    if (listaRuta != null)
+                    {
+                        this.cod_service_auto = listaRuta;
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se puede cargar este archivo.", "", MessageBoxButtons.OK, MessageBoxIcon.None, MessageBoxDefaultButton.Button1);
+                    }
+                    return 1;
                 }
-                else
+                else { return 0; }
+                /*else
                 {
                     
                     List<Input_data> list_input_data = new List<Input_data>();
@@ -138,12 +122,17 @@ namespace LightMeter
                         this.cod_service_auto = listaRuta;
                     }
                     return 0;
-                }
+                }*/
             }catch(Exception ex)
             {
                 MessageBox.Show("A ocurrido un error al cargar archivo de rutas.");
                 return -1;
             } 
+        }
+
+        private void PanelPrincipal_GotFocus(object sender, EventArgs e)
+        {
+
         }
 
     }

@@ -36,11 +36,11 @@ namespace LightMeter.controlador
 
                 line = sr.ReadLine();
 
-                output.Add(split_token(line));
+                //output.Add(split_token(line));
 
                 while (line != null)
                 {
-
+                    
                     output.Add(split_token(line));
 
                     line = sr.ReadLine();
@@ -72,6 +72,8 @@ namespace LightMeter.controlador
 
             try
             {
+
+                _input_data = new Input_data();
 
                 String[] word = line.Split(',');
 

@@ -32,12 +32,8 @@
             this.panelCodServicio = new System.Windows.Forms.Panel();
             this.tCodServ = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.panelNodata = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.pSave = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -48,26 +44,30 @@
             this.tReadActual = new System.Windows.Forms.TextBox();
             this.panelDateHour = new System.Windows.Forms.Panel();
             this.tN_medidor = new System.Windows.Forms.TextBox();
-            this.panelCorrdenada = new System.Windows.Forms.Panel();
-            this.tObservacion = new System.Windows.Forms.TextBox();
             this.back = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.panelVerificador = new System.Windows.Forms.Panel();
             this.tverificador = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panelCorrdenada = new System.Windows.Forms.Panel();
+            this.tObservacion = new System.Windows.Forms.TextBox();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.tGuardar = new System.Windows.Forms.TextBox();
             this.panelCodServicio.SuspendLayout();
-            this.panelNodata.SuspendLayout();
             this.pSave.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelReadActual.SuspendLayout();
             this.panelDateHour.SuspendLayout();
-            this.panelCorrdenada.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panelVerificador.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panelCorrdenada.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelCodServicio
@@ -94,31 +94,10 @@
             // 
             this.listBox1.Location = new System.Drawing.Point(125, 105);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(100, 100);
+            this.listBox1.Size = new System.Drawing.Size(100, 72);
             this.listBox1.TabIndex = 1;
             this.listBox1.Visible = false;
             this.listBox1.SelectedValueChanged += new System.EventHandler(this.listBox1_SelectedValueChanged);
-            // 
-            // panelNodata
-            // 
-            this.panelNodata.BackColor = System.Drawing.Color.Gray;
-            this.panelNodata.Controls.Add(this.label6);
-            this.panelNodata.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelNodata.Location = new System.Drawing.Point(0, 260);
-            this.panelNodata.Name = "panelNodata";
-            this.panelNodata.Size = new System.Drawing.Size(240, 20);
-            this.panelNodata.Click += new System.EventHandler(this.panel6_Click_1);
-            // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.Gray;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(0, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(240, 20);
-            this.label6.Text = "NO SE OUEDE TOMAR LECTURA";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // pSave
             // 
@@ -138,24 +117,6 @@
             this.label5.Size = new System.Drawing.Size(120, 20);
             this.label5.Text = "GUARDAR .";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(129)))), ((int)(((byte)(128)))));
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(0, 187);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(120, 20);
-            // 
-            // label4
-            // 
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 20);
-            this.label4.Text = "OBSERVACION.";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // panel3
             // 
@@ -248,25 +209,6 @@
             this.tN_medidor.Size = new System.Drawing.Size(120, 21);
             this.tN_medidor.TabIndex = 0;
             // 
-            // panelCorrdenada
-            // 
-            this.panelCorrdenada.BackColor = System.Drawing.Color.Transparent;
-            this.panelCorrdenada.Controls.Add(this.tObservacion);
-            this.panelCorrdenada.Location = new System.Drawing.Point(125, 187);
-            this.panelCorrdenada.Name = "panelCorrdenada";
-            this.panelCorrdenada.Size = new System.Drawing.Size(120, 20);
-            // 
-            // tObservacion
-            // 
-            this.tObservacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tObservacion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tObservacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(129)))), ((int)(((byte)(128)))));
-            this.tObservacion.Location = new System.Drawing.Point(0, 0);
-            this.tObservacion.Multiline = true;
-            this.tObservacion.Name = "tObservacion";
-            this.tObservacion.Size = new System.Drawing.Size(120, 20);
-            this.tObservacion.TabIndex = 0;
-            // 
             // back
             // 
             this.back.Location = new System.Drawing.Point(0, 25);
@@ -314,11 +256,67 @@
             this.tverificador.Size = new System.Drawing.Size(120, 21);
             this.tverificador.TabIndex = 0;
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(129)))), ((int)(((byte)(128)))));
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Location = new System.Drawing.Point(0, 187);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(120, 20);
+            // 
+            // label4
+            // 
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(120, 20);
+            this.label4.Text = "OBSERVACION.";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // panelCorrdenada
+            // 
+            this.panelCorrdenada.BackColor = System.Drawing.Color.Transparent;
+            this.panelCorrdenada.Controls.Add(this.tObservacion);
+            this.panelCorrdenada.Location = new System.Drawing.Point(125, 187);
+            this.panelCorrdenada.Name = "panelCorrdenada";
+            this.panelCorrdenada.Size = new System.Drawing.Size(120, 20);
+            // 
+            // tObservacion
+            // 
+            this.tObservacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tObservacion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tObservacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(129)))), ((int)(((byte)(128)))));
+            this.tObservacion.Location = new System.Drawing.Point(0, 0);
+            this.tObservacion.Multiline = true;
+            this.tObservacion.Name = "tObservacion";
+            this.tObservacion.Size = new System.Drawing.Size(120, 20);
+            this.tObservacion.TabIndex = 0;
+            this.tObservacion.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tObservacion_KeyDown);
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.tGuardar);
+            this.panel6.Location = new System.Drawing.Point(126, 213);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(120, 20);
+            // 
+            // tGuardar
+            // 
+            this.tGuardar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tGuardar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tGuardar.Location = new System.Drawing.Point(0, 0);
+            this.tGuardar.Name = "tGuardar";
+            this.tGuardar.Size = new System.Drawing.Size(120, 21);
+            this.tGuardar.TabIndex = 0;
+            this.tGuardar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tGuardar_KeyDown);
+            // 
             // TakeData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.panelVerificador);
             this.Controls.Add(this.panel5);
@@ -328,7 +326,6 @@
             this.Controls.Add(this.panelReadActual);
             this.Controls.Add(this.panelDateHour);
             this.Controls.Add(this.panelCorrdenada);
-            this.Controls.Add(this.panelNodata);
             this.Controls.Add(this.pSave);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -338,17 +335,17 @@
             this.Size = new System.Drawing.Size(240, 280);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TakeData_KeyDown);
             this.panelCodServicio.ResumeLayout(false);
-            this.panelNodata.ResumeLayout(false);
             this.pSave.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panelReadActual.ResumeLayout(false);
             this.panelDateHour.ResumeLayout(false);
-            this.panelCorrdenada.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panelVerificador.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panelCorrdenada.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -359,17 +356,13 @@
         private System.Windows.Forms.TextBox tReadActual;
         private System.Windows.Forms.TextBox tN_medidor;
         private System.Windows.Forms.TextBox tverificador;
-        private System.Windows.Forms.TextBox tObservacion;
 
         private System.Windows.Forms.Panel panelDateHour;
-        private System.Windows.Forms.Panel panelCorrdenada;
         private System.Windows.Forms.Panel panelCodServicio;
-        private System.Windows.Forms.Panel panelNodata;
         private System.Windows.Forms.Panel pSave;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panelReadActual;
@@ -377,13 +370,17 @@
         private System.Windows.Forms.Panel back;
 
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label6;        
+        private System.Windows.Forms.Label label1;        
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panelCorrdenada;
+        private System.Windows.Forms.TextBox tObservacion;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.TextBox tGuardar;
         
        
         

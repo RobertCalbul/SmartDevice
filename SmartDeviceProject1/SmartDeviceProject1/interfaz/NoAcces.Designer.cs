@@ -58,6 +58,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panelReadActual2 = new System.Windows.Forms.Panel();
             this.tReadActual = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.tGuardar = new System.Windows.Forms.TextBox();
             this.panelSave.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -71,6 +73,7 @@
             this.back.SuspendLayout();
             this.panelReadActual.SuspendLayout();
             this.panelReadActual2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSave
@@ -172,6 +175,7 @@
             this.panelLoadPhoto.Location = new System.Drawing.Point(0, 64);
             this.panelLoadPhoto.Name = "panelLoadPhoto";
             this.panelLoadPhoto.Size = new System.Drawing.Size(120, 72);
+            this.panelLoadPhoto.Click += new System.EventHandler(this.panelLoadPhoto_Click);
             // 
             // lblUploadPhoto
             // 
@@ -296,6 +300,7 @@
             this.pictureBoxBack.Name = "pictureBoxBack";
             this.pictureBoxBack.Size = new System.Drawing.Size(40, 40);
             this.pictureBoxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxBack.Click += new System.EventHandler(this.pictureBoxBack_Click);
             // 
             // listBox1
             // 
@@ -340,11 +345,29 @@
             this.tReadActual.Size = new System.Drawing.Size(120, 21);
             this.tReadActual.TabIndex = 0;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.tGuardar);
+            this.panel1.Location = new System.Drawing.Point(127, 265);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(120, 20);
+            // 
+            // tGuardar
+            // 
+            this.tGuardar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tGuardar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tGuardar.Location = new System.Drawing.Point(0, 0);
+            this.tGuardar.Name = "tGuardar";
+            this.tGuardar.Size = new System.Drawing.Size(120, 21);
+            this.tGuardar.TabIndex = 0;
+            this.tGuardar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tGuardar_KeyDown);
+            // 
             // NoAcces
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.panelReadActual2);
             this.Controls.Add(this.panelReadActual);
@@ -376,6 +399,7 @@
             this.back.ResumeLayout(false);
             this.panelReadActual.ResumeLayout(false);
             this.panelReadActual2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -415,5 +439,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBoxBack;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox tGuardar;
     }
 }

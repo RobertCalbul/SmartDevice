@@ -55,7 +55,6 @@ namespace LightMeter.interfaz
             this.panel4.Width = anchoPanel;
             this.panel5.Width = anchoPanel;
             this.pSave.Width = anchoPanel;
-            this.panelNodata.Width = anchoPanel;
             #endregion
 
             #region comprueba que existan los codigos de servicio o no
@@ -69,19 +68,21 @@ namespace LightMeter.interfaz
                     {
                         this.list_input_data = cid.read_file(this.main.filename);
                     }
-                    else
+                    /*else
                     {
                         this.list_input_data = new List<Input_data>();
                         Input_data _ID = new Input_data("00001", "2", "000000004521", "000061869", "005", "0000194", "1.00376");
                         list_input_data.Add(_ID);
 
-                    }
+                    }*/
                 }
             }
             else {
+                this.list_input_data = cid.read_file(this.main.filename);
+                /*
                 this.list_input_data = new List<Input_data>();
                 Input_data _ID = new Input_data("00001", "2", "000000004521", "000061869", "005", "0000194", "1.00376");
-                list_input_data.Add(_ID);
+                list_input_data.Add(_ID);*/
             }
             #endregion
 
@@ -104,7 +105,7 @@ namespace LightMeter.interfaz
                 if (this.list_input_data.Count > 0)
                 {
                     this.main.PanelPrincipal.Controls.Clear();
-                    this.main.PanelPrincipal.Controls.Add(new NoAcces(this.main));
+                    this.main.PanelPrincipal.Controls.Add(new NoAcces(this.main, this));
                 }
                 else 
                 {
@@ -150,17 +151,15 @@ namespace LightMeter.interfaz
 
                 String error = cod.get_error_factor(prom_consumo, lectura_mes_cero);
 
-                String observacion = this.tObservacion.Text.Trim().Equals("") ? "0" : this.tObservacion.Text.Trim();
-
                 String nombre_foto = "";
 
-                String coordX = this.coordenateX;
+                String coordX = this.coordenateX == "" ? "0" : this.coordenateX;
 
-                String CoordY = this.coordenateY;
+                String CoordY = this.coordenateY == "" ? "0" : this.coordenateY;
 
 
                 od = new Output_data(codigo, verificador, n_medidor, lectura_mes_cero, prom_consumo, lectura_actual,
-                                     consumo, fecha, hora, error, observacion, nombre_foto, coordX, CoordY);
+                                     consumo, fecha, hora, error, nombre_foto, coordX, CoordY);
 
 
                 if (cod.write_file(od) > 0)
@@ -180,6 +179,7 @@ namespace LightMeter.interfaz
 
         private void TakeData_KeyDown(object sender, KeyEventArgs e)
         {
+            
             if ((e.KeyCode == System.Windows.Forms.Keys.Up))
             {
                 // Up
@@ -195,7 +195,7 @@ namespace LightMeter.interfaz
             if ((e.KeyCode == System.Windows.Forms.Keys.Right))
             {
                 this.main.PanelPrincipal.Controls.Clear();
-                this.main.PanelPrincipal.Controls.Add(new NoAcces(this.main));
+                this.main.PanelPrincipal.Controls.Add(new NoAcces(this.main, this));
                 // Right
             }
             if ((e.KeyCode == System.Windows.Forms.Keys.Enter))
@@ -258,16 +258,18 @@ namespace LightMeter.interfaz
 
         private Input_data get_data(String selectedItem)
         {
+            Input_data idd = null;
+
 
             foreach (Input_data id in this.list_input_data)
             {
                 if (id.codigo.Equals(selectedItem))
                 {
-                    return id;
+                    idd = id;
+                    return idd;
                 }
-                else return new Input_data();
             }
-            return new Input_data();
+            return idd;
         }
         #endregion
 
@@ -297,7 +299,6 @@ namespace LightMeter.interfaz
             Boolean flag = false;
             flag = !this.tCodServ.Text.Equals("") ? true : false;
             flag &= !this.tN_medidor.Text.Equals("") ? true : false;
-            flag &= !this.tObservacion.Text.Equals("") ? true : false;
             flag &= !this.tReadActual.Text.Equals("") ? true : false;
             flag &= !this.tverificador.Text.Equals("") ? true : false;
 
@@ -322,6 +323,21 @@ namespace LightMeter.interfaz
             else e.Handled = true;
         }
         #endregion 
+
+        private void tObservacion_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((e.KeyCode == System.Windows.Forms.Keys.Right)) {
+                this.main.PanelPrincipal.Controls.Clear();
+                this.main.PanelPrincipal.Controls.Add(new NoAcces(this.main, this));
+            }
+        }
+
+        private void tGuardar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((e.KeyCode == System.Windows.Forms.Keys.Print)) {
+                save_data();
+            }
+        }
       
     }
 }
