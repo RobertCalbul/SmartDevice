@@ -19,8 +19,7 @@ namespace LightMeter.interfaz
     {
 
         #region variables globales
-
-        
+   
         private Form1 main;
         
         private String file_name;
@@ -35,33 +34,34 @@ namespace LightMeter.interfaz
 
         private Input_data datos_externos = new Input_data();
 
-        Controller_input_data cid = new Controller_input_data();
+        private Controller_input_data cid = new Controller_input_data();
 
-        List<Input_data> list_input_data = null;
+        private List<Input_data> list_input_data = null;
 
         private UserControl takedata;
 
         #endregion
 
-        public NoAcces(Form1 main, UserControl takedata)
+        public NoAcces(Form1 main, params String[] args)
         {
         
             InitializeComponent();
             
             this.main = main;
+            //codigo,actual,n_medidor,verificador
+            this.tCodeService.Text = args[0];
 
-            this.takedata = takedata;
+            this.tReadActual.Text = args[1];
+            
+            this.tN_medidor.Text = args[2];
+            
+            this.tVerificador.Text = args[3];
 
             this.tCodeService.Focus();
             
             this._date_hour = new Date_hour();
-
-            //this.takedata.
-            
-            //this.list_input_data = cid.read_file(this.main.filename);
             
             #region comprueba que los codigos de servicio o rutas esten cargados
-
 
             if (this.main.cod_service_auto.Count < 1)
             {
@@ -97,14 +97,21 @@ namespace LightMeter.interfaz
             #endregion
 
             #region configuracio y activacion gps
+            
             objGps = this.main.objGps;// new Gps();
+            
             objGps.Close();
+            
             if (!objGps.Opened)
             {
+            
                 // objgps.DeviceStateChanged += new DeviceStateChangedEventHandler(gps_DeviceStateChange);
+                
                 objGps.LocationChanged += new LocationChangedEventHandler(gps_LocationChanged);
+                
                 objGps.Open();
             }
+
             #endregion
         }
 
@@ -152,7 +159,7 @@ namespace LightMeter.interfaz
 
 
                 od = new Output_data(codigo, verificador, n_medidor, lectura_mes_cero, prom_consumo, lectura_actual,
-                                     consumo, fecha, hora, error, observacion, nombre_foto, coordX, CoordY);
+                                     consumo, fecha, hora, error, nombre_foto, coordX, CoordY);
 
 
                 if (cod.write_file(od) > 0)
@@ -172,7 +179,9 @@ namespace LightMeter.interfaz
 
         private void panelLoadPhoto_Click(object sender, EventArgs e)
         {
+           
             this.file_name = "";
+            
             CameraCapture(true);
         }
 
@@ -224,7 +233,6 @@ namespace LightMeter.interfaz
                     MessageBox.Show("Presione la tecla ENT para capturar foto");
                 
                 }
-
             }           
             /* if (video){cameraCapture.Mode = CameraCaptureMode.VideoWithAudio;cameraCapture.DefaultFileName = @"videotest.3gp";
              }else{cameraCapture.Mode = CameraCaptureMode.Still;cameraCapture.DefaultFileName = @"imagetest.jpg";}
@@ -239,32 +247,6 @@ namespace LightMeter.interfaz
             this.main.PanelPrincipal.Controls.Add(new TakeData(this.main));
         }
 
-        private void NoAcces_KeyDown(object sender, KeyEventArgs e)
-        {
-            if ((e.KeyCode == System.Windows.Forms.Keys.Up))
-            {
-                // Up
-            }
-            if ((e.KeyCode == System.Windows.Forms.Keys.Down))
-            {
-                // Down
-            }
-            if ((e.KeyCode == System.Windows.Forms.Keys.Left))
-            {
-                this.main.PanelPrincipal.Controls.Clear();
-                this.main.PanelPrincipal.Controls.Add(new TakeData(this.main));
-            }
-            if ((e.KeyCode == System.Windows.Forms.Keys.Right))
-            {
-
-                // Right
-            }
-            if ((e.KeyCode == System.Windows.Forms.Keys.Enter))
-            {
-                save_data();
-            }
-        }
-
         #region validaciones
         private Boolean validacionFormulario() {
             
@@ -273,8 +255,7 @@ namespace LightMeter.interfaz
             flag = !this.tReadActual.Text.Equals("") ? true : false;
             
             flag &= !this.tCodeService.Text.Equals("") ? true : false;
-            
-            
+                  
             flag &= !this.tVerificador.Text.Equals("") ? true : false;
             
             flag &= !this.tN_medidor.Text.Equals("") ? true : false;
@@ -307,13 +288,18 @@ namespace LightMeter.interfaz
         private void tCodeService_TextChanged(object sender, EventArgs e)
         {
             String typed = this.tCodeService.Text.Trim();
+            
             List<String> autoList = new List<String>();
+            
             autoList.Clear();
+            
             autoList.Add("-----");
+            
             foreach (String item in this.main.cod_service_auto)
             {
                 if (!String.IsNullOrEmpty(this.tCodeService.Text.Trim()))
                 {
+            
                     if (item.StartsWith(typed))
                     {
 
@@ -324,38 +310,51 @@ namespace LightMeter.interfaz
 
             if (autoList.Count > 0)
             {
+                
                 this.listBox1.DataSource = autoList;
+                
                 this.listBox1.Visible = true;
             }
             else if (this.tCodeService.Text.Equals(""))
             {
+                
                 this.listBox1.Visible = false;
+                
                 this.listBox1.DataSource = null;
             }
             else
             {
+                
                 this.listBox1.Visible = false;
+                
                 this.listBox1.DataSource = null;
             }
         }
+
         private void listBox1_SelectedValueChanged(object sender, EventArgs e)
         {
             if (this.listBox1.DataSource != null)
             {
+                
                 this.listBox1.Visible = false;
+                
                 this.tCodeService.TextChanged -= new EventHandler(this.tCodeService_TextChanged);
 
                 if (this.listBox1.SelectedIndex > 0)
                 {
+
                     String selectedItem = this.listBox1.SelectedItem.ToString();
+                    
                     this.tCodeService.Text = selectedItem;
+                    
                     this.datos_externos = this.get_data(selectedItem);
+                    
                     this.tN_medidor.Text = datos_externos.n_medidor;
                 }
+                
                 this.tCodeService.TextChanged += new EventHandler(this.tCodeService_TextChanged);
             }
         }
-
 
         private Input_data get_data(String selectedItem)
         {
@@ -376,11 +375,16 @@ namespace LightMeter.interfaz
         {
             //this.tCoordenate.Text = "";
             GpsPosition position = args.Position;
+           
             ControlUpdater cu = UpdateControl;
+            
             if (position.LatitudeValid && position.LongitudeValid)
             {
+            
                 String coordenadas = position.Latitude.ToString() + " " + position.Longitude.ToString();
+                
                 this.coordenateX = position.Latitude.ToString("000000.00");
+                
                 this.coordenateY = position.Longitude.ToString("000000.00");
                 //Invoke(cu, tCoordenate, coordenadas);
             }
@@ -394,7 +398,9 @@ namespace LightMeter.interfaz
 
 
         }
+        
         private delegate void ControlUpdater(Control c, string s);
+        
         private void UpdateControl(Control con, string strdata)
         {
             con.Text = strdata;
@@ -418,8 +424,5 @@ namespace LightMeter.interfaz
      
         }
 
-
-
-       
     }
 }

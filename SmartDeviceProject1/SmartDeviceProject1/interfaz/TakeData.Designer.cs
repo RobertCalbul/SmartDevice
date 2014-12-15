@@ -333,7 +333,6 @@
             this.Controls.Add(this.panel1);
             this.Name = "TakeData";
             this.Size = new System.Drawing.Size(240, 280);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TakeData_KeyDown);
             this.panelCodServicio.ResumeLayout(false);
             this.pSave.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

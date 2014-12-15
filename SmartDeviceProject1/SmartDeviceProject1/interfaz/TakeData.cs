@@ -31,9 +31,9 @@ namespace LightMeter.interfaz
 
         private Input_data datos_externos = new Input_data();
 
-        Controller_input_data cid = new Controller_input_data();
+        private Controller_input_data cid = new Controller_input_data();
 
-        List<Input_data> list_input_data = null;
+        private List<Input_data> list_input_data = null;
         
         #endregion 
 
@@ -48,25 +48,38 @@ namespace LightMeter.interfaz
             this.tCodServ.Focus();
 
             #region configuraciones visuales
-            int anchoPanel =Convert.ToInt32(this.Width*0.5);
+
+            int anchoPanel = Convert.ToInt32(this.Width * 0.5);
+            
             this.panel1.Width = anchoPanel;
+            
             this.panel2.Width = anchoPanel;
+            
             this.panel3.Width = anchoPanel;
+            
             this.panel4.Width = anchoPanel;
+            
             this.panel5.Width = anchoPanel;
+            
             this.pSave.Width = anchoPanel;
             #endregion
 
             #region comprueba que existan los codigos de servicio o no
+           
             if (this.main.cod_service_auto.Count < 1)
             {
                 MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            
                 DialogResult dr = MessageBox.Show("Debe cargar las ahora.", "", buttons, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+                
                 if (dr == DialogResult.Yes)
                 {
+                
                     if (this.main.cargarRutas() > 0)
                     {
+                    
                         this.list_input_data = cid.read_file(this.main.filename);
+                    
                     }
                     /*else
                     {
@@ -95,20 +108,31 @@ namespace LightMeter.interfaz
                 objGps.Open();
             }
             #endregion
-        }
-       
+        } 
         //pasa a la siguiente interfaz
         private void panel6_Click_1(object sender, EventArgs e)
         {
+            String codigo = this.tCodServ.Text.Trim();
+           
+            String actual = this.tReadActual.Text.Trim();
+            
+            String n_medidor = this.tN_medidor.Text.Trim();
+            
+            String verificador = this.tverificador.Text.Trim();
+
             try
             {
                 if (this.list_input_data.Count > 0)
                 {
+            
                     this.main.PanelPrincipal.Controls.Clear();
-                    this.main.PanelPrincipal.Controls.Add(new NoAcces(this.main, this));
+                    
+                    this.main.PanelPrincipal.Controls.Add(new NoAcces(this.main, codigo,actual,n_medidor,verificador));
+                
                 }
                 else 
                 {
+                
                     MessageBox.Show("Para acceder a la siguiente pantalla debe de tener cargadas las rutas."); 
                 }
             }catch(Exception ex)
@@ -164,10 +188,12 @@ namespace LightMeter.interfaz
 
                 if (cod.write_file(od) > 0)
                 {
+                   
                     new Dialog(this.main).ShowDialog();
                 }
                 else
                 {
+                    
                     MessageBox.Show("Ha ocurrido un error al guardar, por favor intentelo nuevamente.", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                 }
             }
@@ -175,47 +201,25 @@ namespace LightMeter.interfaz
             {
                 MessageBox.Show("Verifique todos los campo.", "", MessageBoxButtons.OK, MessageBoxIcon.None, MessageBoxDefaultButton.Button1);
             }
-        }
-
-        private void TakeData_KeyDown(object sender, KeyEventArgs e)
-        {
-            
-            if ((e.KeyCode == System.Windows.Forms.Keys.Up))
-            {
-                // Up
-            }
-            if ((e.KeyCode == System.Windows.Forms.Keys.Down))
-            {
-                // Down
-            }
-            if ((e.KeyCode == System.Windows.Forms.Keys.Left))
-            {
-                // Left
-            }
-            if ((e.KeyCode == System.Windows.Forms.Keys.Right))
-            {
-                this.main.PanelPrincipal.Controls.Clear();
-                this.main.PanelPrincipal.Controls.Add(new NoAcces(this.main, this));
-                // Right
-            }
-            if ((e.KeyCode == System.Windows.Forms.Keys.Enter))
-            {
-                save_data();
-            }
-        }
+        }       
 
         #region auto-complete codigo servicios
         private void tCodServ_TextChanged(object sender, EventArgs e)
         {
             String typed = this.tCodServ.Text.Trim();
+            
             List<String> autoList = new List<String>();
+            
             autoList.Clear();
+            
             autoList.Add("-----");
 
 
             foreach (String item in this.main.cod_service_auto)
             {
+            
                 if (!String.IsNullOrEmpty(this.tCodServ.Text.Trim())) {
+                
                     if (item.StartsWith(typed)) {
                         
                         autoList.Add(item);
@@ -224,16 +228,22 @@ namespace LightMeter.interfaz
             }
 
             if (autoList.Count > 0) {
+                
                 this.listBox1.DataSource = autoList;
+                
                 this.listBox1.Visible = true;
             }
             else if (this.tCodServ.Text.Equals(""))
             {
+                
                 this.listBox1.Visible = false;
+                
                 this.listBox1.DataSource = null;
             }
             else {
+                
                 this.listBox1.Visible = false;
+                
                 this.listBox1.DataSource = null;
             }
         }
@@ -242,16 +252,23 @@ namespace LightMeter.interfaz
         {
             if (this.listBox1.DataSource != null)
             {
+                
                 this.listBox1.Visible = false;
+                
                 this.tCodServ.TextChanged -= new EventHandler(this.tCodServ_TextChanged);
 
                 if (this.listBox1.SelectedIndex > 0)
                 {
                     String selectedItem = this.listBox1.SelectedItem.ToString();
+                
                     this.tCodServ.Text = selectedItem;
+                    
                     this.datos_externos = this.get_data(selectedItem);
+                    
                     this.tN_medidor.Text = datos_externos.n_medidor;
+                
                 }
+                
                 this.tCodServ.TextChanged += new EventHandler(this.tCodServ_TextChanged);
             }
         }
@@ -260,12 +277,13 @@ namespace LightMeter.interfaz
         {
             Input_data idd = null;
 
-
             foreach (Input_data id in this.list_input_data)
             {
                 if (id.codigo.Equals(selectedItem))
                 {
+            
                     idd = id;
+                    
                     return idd;
                 }
             }
@@ -294,16 +312,22 @@ namespace LightMeter.interfaz
         #endregion 
 
         #region algunas validaciones
+        
         private Boolean validacionFormulario()
         {
             Boolean flag = false;
+          
             flag = !this.tCodServ.Text.Equals("") ? true : false;
+            
             flag &= !this.tN_medidor.Text.Equals("") ? true : false;
+            
             flag &= !this.tReadActual.Text.Equals("") ? true : false;
+            
             flag &= !this.tverificador.Text.Equals("") ? true : false;
 
             return flag;
         }
+        
         private void tCodServ_KeyPress(object sender, KeyPressEventArgs e)
         {
             validaNumero(e);
@@ -318,24 +342,42 @@ namespace LightMeter.interfaz
         {
 
             if (Char.IsDigit(e.KeyChar)) e.Handled = false;
+            
             else if (Char.IsControl(e.KeyChar)) e.Handled = false;
+            
             else if (Char.IsSeparator(e.KeyChar)) e.Handled = false;
+            
             else e.Handled = true;
         }
+       
         #endregion 
 
         private void tObservacion_KeyDown(object sender, KeyEventArgs e)
-        {
+        {           
+            String codigo = this.tCodServ.Text.Trim();
+            
+            String actual = this.tReadActual.Text.Trim();
+            
+            String n_medidor = this.tN_medidor.Text.Trim();
+            
+            String verificador = this.tverificador.Text.Trim();
+
             if ((e.KeyCode == System.Windows.Forms.Keys.Right)) {
+            
                 this.main.PanelPrincipal.Controls.Clear();
-                this.main.PanelPrincipal.Controls.Add(new NoAcces(this.main, this));
+                
+                this.main.PanelPrincipal.Controls.Add(new NoAcces(this.main, codigo,actual,n_medidor,verificador));
+            
             }
         }
 
         private void tGuardar_KeyDown(object sender, KeyEventArgs e)
         {
-            if ((e.KeyCode == System.Windows.Forms.Keys.Print)) {
+            if ((e.KeyCode == System.Windows.Forms.Keys.Print))
+            {
+
                 save_data();
+
             }
         }
       
