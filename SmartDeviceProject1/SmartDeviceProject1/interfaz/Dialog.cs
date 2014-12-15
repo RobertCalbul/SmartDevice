@@ -9,9 +9,16 @@ using System.Windows.Forms;
 
 namespace LightMeter.interfaz
 {
+    /// <summary>
+    /// Class Dialog()
+    /// </summary>
     public partial class Dialog : Form
     {
-        Form1 main;
+        private Form1 main;
+        /// <summary>
+        /// Dialog()
+        /// </summary>
+        /// <param name="main">recibe instancia de MainWindows</param>
         public Dialog(Form1 main)
         {
             InitializeComponent();

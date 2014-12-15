@@ -36,7 +36,10 @@ namespace LightMeter.interfaz
         private List<Input_data> list_input_data = null;
         
         #endregion 
-
+        /// <summary>
+        /// TakeData(main)
+        /// </summary>
+        /// <param name="main">recibe instancia de MainWindows</param>
         public TakeData(Form1 main)
         {
             InitializeComponent();
@@ -137,6 +140,7 @@ namespace LightMeter.interfaz
                 }
             }catch(Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 MessageBox.Show("Ocurrio un error al intentar cargar la pantalla\nPorfavor reinicie la aplicación.");
             }
         }
@@ -378,6 +382,21 @@ namespace LightMeter.interfaz
 
                 save_data();
 
+            }
+        }
+
+        private void listBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((e.KeyCode == System.Windows.Forms.Keys.Down)) {
+                this.listBox1.SelectedIndex = this.listBox1.SelectedIndex < this.listBox1.Items.Count ? this.listBox1.SelectedIndex + 1 : this.listBox1.SelectedIndex ;
+            }
+            if ((e.KeyCode == System.Windows.Forms.Keys.Up)) 
+            {
+                this.listBox1.SelectedIndex = this.listBox1.SelectedIndex > 0 ? this.listBox1.SelectedIndex - 1 : this.listBox1.SelectedIndex;
+            }
+            if ((e.KeyCode == System.Windows.Forms.Keys.Enter)) 
+            {
+                listBox1_SelectedValueChanged(sender, e);
             }
         }
       

@@ -95,6 +95,9 @@
 
         #endregion
 
+        /// <summary>
+        /// PanelPrincial Item publico que actualiza pantallas
+        /// </summary>
         public System.Windows.Forms.Panel PanelPrincipal;
         private System.Windows.Forms.Timer Timer;
         private System.Windows.Forms.MenuItem menuItem1;

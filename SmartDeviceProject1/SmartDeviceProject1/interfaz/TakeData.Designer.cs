@@ -1,5 +1,7 @@
 ﻿namespace LightMeter.interfaz
-{
+{   /// <summary>
+    /// Class TakeData
+    /// </summary>
     partial class TakeData
     {
         /// <summary> 
@@ -98,6 +100,7 @@
             this.listBox1.TabIndex = 1;
             this.listBox1.Visible = false;
             this.listBox1.SelectedValueChanged += new System.EventHandler(this.listBox1_SelectedValueChanged);
+            this.listBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listBox1_KeyDown);
             // 
             // pSave
             // 

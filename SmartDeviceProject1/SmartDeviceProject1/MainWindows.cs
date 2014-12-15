@@ -13,15 +13,30 @@ using LightMeter.controlador;
 using System.Collections.Generic;
 
 namespace LightMeter
-{
+{   /// <summary>
+    /// Class de main principal
+    /// </summary>
     public partial class Form1 : Form
-    {
-        private LightMeter.interfaz.Welcome _welcome;
-        public Gps objGps;
-        public List<String> cod_service_auto = new List<string>();
-        public String filename = null;
-       // public List<Input_data> list_input_data = new List<Input_data>();
+    {   
 
+        private LightMeter.interfaz.Welcome _welcome;
+        /// <summary>
+        /// Almacena el obeto GPS
+        /// </summary>
+        public Gps objGps;
+        /// <summary>
+        /// Almacena una lista con codigos de servicios
+        /// </summary>
+        public List<String> cod_service_auto = new List<string>();
+        /// <summary>
+        /// Almacena ruta del archivo RUTAS.txt
+        /// </summary>
+        public String filename = null;
+
+
+        /// <summary>
+        /// Form1()
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
@@ -63,16 +78,14 @@ namespace LightMeter
             this.Close();
         }
 
-        public String dateFormat(String date) {
-            String[] data = date.Split(' ');
-            return data[0].Substring(0, 2) + "/" + data[0].Substring(2, 2) + "/" + data[0].Substring(4, 2) +" "+data[1];
-        }
 
         private void menuItemRutas_Click(object sender, EventArgs e)
         {
             cargarRutas();
         }
-
+        /// <summary>
+        /// cargarRutas()
+        /// </summary>
         public int cargarRutas()
         {
         
@@ -125,6 +138,7 @@ namespace LightMeter
                 }*/
             }catch(Exception ex)
             {
+                Console.WriteLine("A ocurrido un error al cargar archivo de rutas. " + ex.Message);
                 MessageBox.Show("A ocurrido un error al cargar archivo de rutas.");
                 return -1;
             } 

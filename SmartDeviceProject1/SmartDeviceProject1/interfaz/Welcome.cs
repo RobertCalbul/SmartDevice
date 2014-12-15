@@ -10,9 +10,19 @@ using System.Windows.Forms;
 
 namespace LightMeter.interfaz
 {
+    /// <summary>
+    /// Class Welcome, pantalla de Bienvenida tiempo de duracion 1 seg
+    /// </summary>
     public partial class Welcome : UserControl
     {
+        /// <summary>
+        /// main almacena instancia de MainWindows
+        /// </summary>
         public Form1 main;
+        /// <summary>
+        /// Almacena ruta del archivo RUTAS.txt
+        /// </summary>
+        /// <param name="main">Recibe instancia MainWindows desde MainWindows</param>
         public Welcome(Form1 main)
         {
             InitializeComponent();
@@ -29,10 +39,8 @@ namespace LightMeter.interfaz
         private void panel6_Click(object sender, EventArgs e)
         {
             this.main.PanelPrincipal.Controls.Clear();
+            
             this.main.PanelPrincipal.Controls.Add(new TakeData(main));
-
-           // Gps gps = new Gps();
-
         }
     }
 }

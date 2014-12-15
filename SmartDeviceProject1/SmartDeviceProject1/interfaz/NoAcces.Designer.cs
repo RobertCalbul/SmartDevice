@@ -1,5 +1,7 @@
-﻿namespace LightMeter.interfaz
-{
+﻿namespace LightMeter.interfaz{
+        /// <summary>
+        /// Class NoAcces
+        /// </summary>
     partial class NoAcces
     {
         /// <summary> 

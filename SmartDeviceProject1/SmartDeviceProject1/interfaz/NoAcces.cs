@@ -38,10 +38,12 @@ namespace LightMeter.interfaz
 
         private List<Input_data> list_input_data = null;
 
-        private UserControl takedata;
-
         #endregion
-
+        /// <summary>
+        /// Almacena ruta del archivo RUTAS.txt
+        /// </summary>
+        /// <param name="args">recibe datos desde takeData</param>
+        /// <param name="main">recibe instancia de MainWindows</param>
         public NoAcces(Form1 main, params String[] args)
         {
         
